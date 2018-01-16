@@ -1,0 +1,224 @@
+
+<div fxLayout = "column"  fxLayoutAlign="center center" style="margin-top: 50px;">
+  <h1>Let's style with style</h1>
+  <h3>with angular/flex-layout we'll design a responsive website
+      with minimum time and effort, reduce css and gain control
+    on our code
+  </h3>  
+  <p>
+  Angular Flex Layout provides a sophisticated layout API using FlexBox CSS + mediaQuery.
+  The Flex Layout engine intelligently automates the process of applying appropriate Flexbox CSS to browser
+  view hierarchies. This automation also addresses many of the complexities and workarounds encountered with 
+  the traditional, manual, CSS-only application of box CSS.
+  </p>
+  <table style="border-color:black;">
+<thead style="background: gray;">
+<tr>
+<th>HTML API</th>
+<th>Allowed values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fxLayout</td>
+<td><code>row | column | row-reverse | column-reverse</code></td>
+</tr>
+<tr>
+<td>fxLayoutAlign</td>
+<td><code>start|center|end|space-around|space-between</code><code>start|center|end|stretch</code></td>
+</tr>
+<tr>
+<td>fxLayoutWrap</td>
+<td><code>"" | wrap | none | nowrap | reverse</code></td>
+</tr>
+<tr>
+<td>fxLayoutGap</td>
+<td>%, px, vw, vh</td>
+</tr>
+</tbody>
+</table>
+
+<p>API for DOM elements:</p>
+<table style="height: 137px;">
+<tbody>
+<tr>
+<td>fxFlex</td>
+<td>&#8220;&#8221; , px , %, vw, vh, &#8221; &#8220;,</td>
+</tr>
+<tr>
+<td>fxFlexOrder</td>
+<td>int</td>
+</tr>
+<tr>
+<td>fxFlexOffset</td>
+<td>%, px, vw, vh</td>
+</tr>
+<tr>
+<td>fxFlexAlign</td>
+<td><code>start|baseline|center|end</code></td>
+</tr>
+<tr>
+<td>fxFlexFill</td>
+</tr>
+</tbody>
+</table> 
+<p>API for any element:</p>
+<table style="height: 97px;" >
+<thead>
+<tr>
+<th>HTML API</th>
+<th>Allowed values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fxHide</td>
+<td>TRUE, FALSE, 0, &#8220;&#8221;</td>
+</tr>
+<tr>
+<td>fxShow</td>
+<td>TRUE, FALSE, 0, &#8220;&#8221;</td>
+</tr>
+</tbody>
+</table>
+<p>Breakpoint aliases:</p>
+<table style="height: 333px; border-color:gray;">
+<thead style="background:gray;">
+<tr>
+<th>breakpoint</th>
+<th>mediaQuery</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#8220;&#8221;</td>
+<td>&#8216;screen&#8217;</td>
+</tr>
+<tr>
+<td>xs</td>
+<td>&#8216;screen and (max-width: 599px)&#8217;</td>
+</tr>
+<tr>
+<td>gt-xs</td>
+<td>&#8216;screen and (min-width: 600px)&#8217;</td>
+</tr>
+<tr>
+<td>sm</td>
+<td>&#8216;screen and (min-width: 600px) and (max-width: 959px)&#8217;</td>
+</tr>
+<tr>
+<td>gt-sm</td>
+<td>&#8216;screen and (min-width: 960px)&#8217;</td>
+</tr>
+<tr>
+<td>md</td>
+<td>&#8216;screen and (min-width: 960px) and (max-width: 1279px)&#8217;</td>
+</tr>
+<tr>
+<td>gt-md</td>
+<td>&#8216;screen and (min-width: 1280px)&#8217;</td>
+</tr>
+<tr>
+<td>lg</td>
+<td>&#8216;screen and (min-width: 1280px) and (max-width: 1919px)&#8217;</td>
+</tr>
+<tr>
+<td>gt-lg</td>
+<td>&#8216;screen and (min-width: 1920px)&#8217;</td>
+</tr>
+<tr>
+<td>xl</td>
+<td>&#8216;screen and (min-width: 1920px)&#8217;</td>
+</tr>
+</tbody>
+</table>
+ 
+  <pre>
+ 
+ import &#123; FlexLayoutModule &#125; from '@angular/flex-layout';
+  
+ @NgModule(&#123;
+ imports: [FlexLayoutModule.forRoot()],
+ &#125;)
+ export class AppModule&#123;&#125; 
+
+</pre>
+
+</div>
+
+  <p>This is my div:</p><pre>&lt;div class="container"  fxLayout="row" fxLayoutAlign="center" style="border-style: solid;"&gt; i'm div&lt;/div&gt;</pre>
+  
+  <div  class="container"  fxLayout = "row" fxLayoutAlign="center" style="border-style: solid;"> i'm div</div>
+  <p style="font-size:18px;">Let's add some flex-layout directives and see the changes</p>
+  <pre> 
+        
+        &lt;div class="container" fxLayout = "row" style="border-style: solid;"&gt;     
+            &lt;div fxFlex="33.33%"&gt;1&lt;/div&gt;
+            &lt;div&gt;2&lt;/div&gt;    
+            &lt;div&gt;3&lt;/div&gt;
+        &lt;/div&gt;
+         
+  </pre>
+    <div class="container"  fxLayout = "row" style="border-style: solid;">     
+     <div fxFlex="33.33%" style="border-style: solid;">1</div>
+     <div>2</div>    
+     <div>3</div>
+     </div>
+    <p>now we will add multi rows to our screen and play with spaces between the div's and the
+       order of the elements by adding fxLayoutAlign and fxFlexOrder directives</p> 
+    <pre>
+     
+      &lt;div class="container" fxFlexOrder="3" fxLayout = "row" style="border-style: solid;"&gt;     
+        &lt;div fxFlex="33.33%">1&lt;/div&gt;
+        &lt;div>2&lt;/div&gt;    
+        &lt;div>3&lt;/div&gt;
+     &lt;/div&gt;
+     &lt;div class="container" fxLayoutAlign="space-around center" fxLayout = "row"&gt; 
+        &lt;div style="border-style: solid;">4&lt;/div&gt;
+        &lt;div style="border-style: solid;">5&lt;/div&gt; 
+        &lt;div style="border-style: solid;">6&lt;/div&gt;
+     &lt;/div&gt;
+     &lt;div class="container" fxLayoutAlign="space-between"  fxLayout = "row"&gt; 
+        &lt;div style="border-style: solid;">7&lt;/div&gt;
+        &lt;div fxFlexOrder="3" style="border-style: solid;">8&lt;/div&gt;
+        &lt;div style="border-style: solid;">9&lt;/div&gt;
+     &lt;/div&gt;       
+
+    </pre>
+    <div style="border-style: solid;" fxLayout='column' >
+    <div class="container"  fxFlexOrder="3" fxLayout = "row" style="border-style: solid;">     
+     <div style="border-style: solid;" fxFlex="33.33%">1</div>
+     <div style="border-style: solid;">2</div>    
+     <div style="border-style: solid;">3</div>
+     </div>
+      <div class="container" fxLayoutAlign="space-around center" fxLayout = "row"> 
+     <div style="border-style: solid;">4</div> 
+     <div style="border-style: solid;">5</div> 
+     <div style="border-style: solid;">6</div>
+      </div>
+      <div class="container" fxLayoutAlign="space-between"  fxLayout = "row"> 
+        <div style="border-style: solid;">7</div>
+        <div fxFlexOrder="3" style="border-style: solid;">8</div>
+        <div style="border-style: solid;">9</div>
+      </div>       
+    </div>
+
+
+<div class="container" fxLayout = "column" fxLayoutAlign="space-around center" style="font-size: 25px;">
+  <div class="container" fxLayout = "row"  fxLayoutAlign="center center" fxFlex="33.3%" style="border-bottom: solid;">     
+     <div  fxFlex="33.3%" style="border-right: solid;">1</div>
+     <div style="border-right: solid;">2</div>    
+     <div>3</div>
+  </div>
+  <div class="container" fxLayout = "row" fxLayoutAlign="center center" fxFlex="33.3%" style="border-bottom: solid;"> 
+     <div style="border-right: solid;">4</div> 
+     <div style="border-right: solid;">5</div> 
+     <div >6</div>
+  </div>
+  <div class="container" fxLayout = "row"  fxLayoutAlign="center center" fxFlex="33.3%"> 
+        <div style="border-right: solid;">7</div>
+        <div style="border-right: solid;">8</div>
+        <div>9</div>
+  </div>       
+</div>
+

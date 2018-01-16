@@ -1,2 +1,24 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<h1>Hello world</h1>
+<div fxLayout fxLayout="row" fxLayoutAlign="start center" fxHide fxShow.xs="true">
+    <mat-menu #appMenu="matMenu">
+          
+         <div><a [routerLink]="['/']"><button [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Home</button></a></div>       
+         <div><a [routerLink]="['/Trip']"><button [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Example</button></a> </div>               
+         <div><a [routerLink]="['/Tutorial']" title="Ceatch up with Angular 2/4"><button [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Tutorial</button></a></div>      
+         <div><a [routerLink]="['/Contacts']"><button [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Hire me</button></a></div>
+     
+    </mat-menu>
+    
+    <button mat-icon-button [matMenuTriggerFor]="appMenu">
+        <mat-icon>menu</mat-icon>
+    </button>
+</div>
+
+    <app-navbar></app-navbar>
+     
+    <router-outlet></router-outlet>
+
+<div fxShow fxHide.md="true" > ... </div>
+
+<app-footer></app-footer>
+

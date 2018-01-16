@@ -1,0 +1,26 @@
+
+#mySelect {
+  
+  overflow-y: scroll;
+  margin: 0;
+  padding: 0;
+  height: 300px;
+  width: 200px;
+  border: 2px solid #ccc;
+  size: 100px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  border-bottom: 1px solid black;
+  background-color:snow;
+  -webkit-overflow-scrolling: touch;
+}
+.li{
+
+}
+#list {
+  padding: 10px 20px;
+  
+  background-color: solid white;
+}
+li {background-color: gray; color: black;}
+

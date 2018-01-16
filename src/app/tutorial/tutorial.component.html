@@ -1,0 +1,30 @@
+
+     
+
+<div class="container"
+     fxLayout
+     fxLayout.xs="row"
+     fxLayoutAlign="center center"
+     fxLayoutGap="10px"
+     fxLayoutGap.xs="0">
+    <div class="item item-1" fxFlex="20%" >
+    
+    
+    <mat-nav-list style="position: fixed; top:60px; border-right:1px solid #16222c;">
+        <h3 matSubheader>Tutorial's</h3>
+          <mat-list-item>
+           <a [routerLink]="['Tutorial/AngularBasic']" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Angular basic</a>           
+          </mat-list-item>  
+         <mat-divider></mat-divider>
+          <mat-list-item>   
+          <a [routerLink]="['Tutorial/Tutorial-style']" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Style with Style</a>
+        </mat-list-item>
+          <mat-divider></mat-divider>                              
+    </mat-nav-list>
+    </div>
+  
+    <div class="item item-2" fxFlex="60%">
+      <router-outlet></router-outlet>
+    </div>
+      <div class="item item-3" fxFlex="10%"></div>
+  </div>

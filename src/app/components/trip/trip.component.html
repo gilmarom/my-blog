@@ -1,0 +1,60 @@
+
+ <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDFRsRIKxzaSLI-2njS5xXbdo-MfHnb5-o&callback=initMap"
+    async defer></script>
+
+<div class="container" id="con-border" style="height:1500px; margin-top: 50px;"  >
+  <div id="page-wrap">
+     <div class="container">
+        <div id="direction-menu">
+          <div>
+                     
+          </div>
+        </div>
+      </div> 
+         
+      <div class="row">  
+      <form >
+        <div class="form-group">
+          <input placeholder="search for location" autocorrect="off" id="search" autocapitalize="off" spellcheck="off" type="text" class="form-control" #search [formControl]="searchControl">
+        </div>
+      </form>    
+     </div>
+           
+      
+
+    <div class="row">   
+    <h3>Choose your travel points on the map</h3>     
+     <br>
+     
+<div fxLayout='row'  fxLayout.lt-md="column">
+ 
+    <agm-map [latitude]="lat" 
+      [longitude]="lng" 
+      [zoom]="zoom"
+      [disableDefaultUI]="false"
+      [zoomControl]="false"
+      (mapClick)="mapClicked($event)">
+      <agm-marker  *ngFor="let m of markers; let i = index"               
+                (markerClick)="clickedMarker(m.label, i,$event)" 
+                [latitude]="m.lat" 
+                [longitude]="m.lng"                
+                [label]="m.label"                    
+                [markerDraggable]="m.draggable"
+                [openInfoWindow]="true"
+                (dragEnd)="markerDragEnd(m, $event)"
+                >            
+         <agm-info-window>{{ m.lat + " " + m.lng}}</agm-info-window>
+      </agm-marker>
+     
+   </agm-map>
+   
+    
+   <app-returant-list id="list" [newResturant]="names" ></app-returant-list>
+  
+  </div>  
+  </div>
+  </div>
+ </div> 
+
+
+
