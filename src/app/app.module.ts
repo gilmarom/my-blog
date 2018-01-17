@@ -41,7 +41,13 @@ import { AlertDirective } from './directives/alert/alert.directive';
 import { AlertComponent } from './components/alert/alert.component';
 import { ResturantListComponent } from './components/trip/returant-list/returant-list.component';
 
+// Import your library
+import { PrismModule } from '@sgbj/angular-prism';
 
+import 'prismjs/prism';
+import 'prismjs/components/prism-typescript';
+import 'prismjs/components/prism-scss';
+import 'prismjs/components/prism-markup';
 
 const appRoutes: Routes =  [
   {path:'', component: HomeComponent},
@@ -66,6 +72,7 @@ const appRoutes: Routes =  [
     AlertDirective,
     AlertComponent,
     ResturantListComponent,
+
     
   ],
   
@@ -77,7 +84,7 @@ const appRoutes: Routes =  [
     FormsModule,
     ReactiveFormsModule,
     TreeModule,
-    
+    PrismModule,
     AgmCoreModule.forRoot({
        apiKey: 'AIzaSyDFRsRIKxzaSLI-2njS5xXbdo-MfHnb5-o',
        libraries: ['places']
@@ -85,7 +92,7 @@ const appRoutes: Routes =  [
     AngularMaterialModule,
     TutorialModule,
     RouterModule.forRoot(appRoutes),
-
+    
   ],
   providers: [ ContactsService, AlertService, GoogleMapDirective ],
   bootstrap: [ AppComponent ]

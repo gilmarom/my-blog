@@ -52,10 +52,7 @@
                  </pre>  
           </div>
           <app-tree-view></app-tree-view>
-          <div>  
-                  <pre id="code">
-            
-                          
+           <prism language="typescript" >
                    import &#123; NgModule &#125; from '@angular/core';
                    import &#123; BrowserModule &#125; from '@angular/platform-browser';
                    import &#123; RouterModule, Routes &#125; from '@angular/router';
@@ -78,9 +75,7 @@
                           &#125;)
                           export class AppModule &#123; &#125;
                           
-                          </pre>
-          
-          </div>
+        </prism>  
       <br> 
       <p>We can learn a lot from this example on how to work with Angular,
       <strong>The Providers and Declarations</strong> are the two main structures in the NgModule 
@@ -107,7 +102,7 @@
       <mat-tab-group style="width:100%">
            
       <mat-tab label="contacts.component.ts">
-            <pre id="code">
+            <prism language="typescript" >
 
                             import &#123; Component, OnInit, AfterViewChecked, ViewChild, 
                               OnChanges &#125; from '@angular/core';
@@ -219,9 +214,9 @@
                               console.log(JSON.stringify(this.contactSubmission));
                             &#125;
                           &#125;
-    </pre>
+  </prism >
       </mat-tab>
-      <mat-tab label="contacts.service.ts"><pre>
+      <mat-tab label="contacts.service.ts"><prism language="typescript" >
               
                               import &#123; HttpClient ,HttpRequest &#125; from '@angular/common/http';
                               import &#123; Injectable, Input &#125; from '@angular/core';
@@ -243,10 +238,10 @@
                                   return this.http.post&lt;ContactSubmission&gt;('api/contacts/sendContactMsg', contactSubmission);
                                 &#125;
                               &#125;            
-          </pre>
+          </prism>
           </mat-tab>
   <mat-tab label="contact-submission.ts">
-           <pre>
+           <prism language="typescript" >
                               export class ContactSubmission &#123;
                               
                               public date: Date;
@@ -257,7 +252,7 @@
                               public contactPhone: string;
                               public captcha: string;
                               &#125;
-              </pre>
+           </prism>
   </mat-tab>
 </mat-tab-group>
 
@@ -269,3 +264,5 @@
     </div>
  
 <!-- style tutorial !-->
+<prism language="typescript">console.log('Hello world!');</prism>
+<prism language="python">import {{'{'}} nltk } from nltk </prism>

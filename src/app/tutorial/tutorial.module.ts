@@ -11,6 +11,16 @@ import { FlexLayoutModule , ObservableMedia} from "@angular/flex-layout";
 import { TreeViewComponent } from './tree-view/tree-view.component';
 import { TreeModule } from 'angular-tree-component';
 import { ReactiveFormsComponent } from './components/reactive-forms/reactive-forms.component';
+import { NodePythonComponent } from './components/node-python/node-python.component';
+// code blocks//
+import { PrismModule } from '@sgbj/angular-prism';
+
+import 'prismjs/prism';
+import 'prismjs/components/prism-typescript';
+import 'prismjs/components/prism-scss';
+import 'prismjs/components/prism-markup';
+
+
 const tutorialRoutes: Routes =  [
       
       { path:'Tutorial',
@@ -18,7 +28,8 @@ const tutorialRoutes: Routes =  [
         children:[
            { path:'', component: Angular1Component } ,
            { path:'Tutorial/Tutorial-style', component: StyleTutorialComponent } ,
-           { path: 'Tutorial/AngularBasic', component:Angular1Component}// angu//
+           { path: 'Tutorial/AngularBasic', component:Angular1Component},
+           { path: 'Tutorial/Node-python', component:NodePythonComponent}
         ]
    },
          
@@ -32,9 +43,11 @@ const tutorialRoutes: Routes =  [
     BrowserAnimationsModule,
     FlexLayoutModule,
     TreeModule,
+    PrismModule,
+
   ],
   exports: [ TutorialComponent, StyleTutorialComponent,Angular1Component ], 
-  declarations: [ TutorialComponent, StyleTutorialComponent, Angular1Component, TreeViewComponent, ReactiveFormsComponent ],
+  declarations: [ TutorialComponent, StyleTutorialComponent, Angular1Component, TreeViewComponent, ReactiveFormsComponent, NodePythonComponent ],
   bootstrap: [TutorialComponent]
   
 })

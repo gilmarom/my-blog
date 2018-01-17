@@ -150,7 +150,7 @@
   
   <div  class="container"  fxLayout = "row" fxLayoutAlign="center" style="border-style: solid;"> i'm div</div>
   <p style="font-size:18px;">Let's add some flex-layout directives and see the changes</p>
-  <pre> 
+  <pre id="code"> 
         
         &lt;div class="container" fxLayout = "row" style="border-style: solid;"&gt;     
             &lt;div fxFlex="33.33%"&gt;1&lt;/div&gt;
@@ -166,7 +166,7 @@
      </div>
     <p>now we will add multi rows to our screen and play with spaces between the div's and the
        order of the elements by adding fxLayoutAlign and fxFlexOrder directives</p> 
-    <pre>
+    <pre id="code">
      
       &lt;div class="container" fxFlexOrder="3" fxLayout = "row" style="border-style: solid;"&gt;     
         &lt;div fxFlex="33.33%">1&lt;/div&gt;
@@ -203,7 +203,29 @@
       </div>       
     </div>
 
+<p>Lets create a tic tac toe bord</p>
+<pre id="code">
 
+  
+  &lt;div class="container" fxLayout = "column" fxLayoutAlign="space-around center" style="font-size: 25px;"&gt;
+  &lt;div class="container" fxLayout = "row"  fxLayoutAlign="center center" fxFlex="33.3%" style="border-bottom: solid;"&gt;    
+     &lt;div  fxFlex="33.3%" style="border-right: solid;">1&lt;/div&gt;
+     &lt;div style="border-right: solid;">2&lt;/div&gt;    
+     &lt;div>3&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="container" fxLayout = "row" fxLayoutAlign="center center" fxFlex="33.3%" style="border-bottom: solid;"&gt;
+     &lt;div style="border-right: solid;">4&lt;/div&gt; 
+     &lt;div style="border-right: solid;">5&lt;/div&gt; 
+     &lt;div >6&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="container" fxLayout = "row"  fxLayoutAlign="center center" fxFlex="33.3%"&gt;
+        &lt;div style="border-right: solid;">7&lt;/div&gt;
+        &lt;div style="border-right: solid;">8&lt;/div&gt;
+        &lt;div>9&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+</pre>
 <div class="container" fxLayout = "column" fxLayoutAlign="space-around center" style="font-size: 25px;">
   <div class="container" fxLayout = "row"  fxLayoutAlign="center center" fxFlex="33.3%" style="border-bottom: solid;">     
      <div  fxFlex="33.3%" style="border-right: solid;">1</div>
