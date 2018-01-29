@@ -19,8 +19,9 @@ import 'prismjs/prism';
 import 'prismjs/components/prism-typescript';
 import 'prismjs/components/prism-scss';
 import 'prismjs/components/prism-markup';
-
-
+import 'prismjs/components/prism-python';
+import 'prismjs/components/prism-javascript';
+import 'prismjs/components/prism-haml';
 const tutorialRoutes: Routes =  [
       
       { path:'Tutorial',

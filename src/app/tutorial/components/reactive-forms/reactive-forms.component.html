@@ -1,3 +1,161 @@
 <p>
   reactive-forms works!
 </p>
+  <span>Contacts Form</span> 
+      
+      <mat-tab-group style="width:100%">
+           
+      <mat-tab label="contacts.component.ts">
+            <prism language="typescript" >
+
+                            import &#123; Component, OnInit, AfterViewChecked, ViewChild, 
+                              OnChanges &#125; from '@angular/core';
+                            import &#123; NgForm  &#125; from '@angular/forms';
+                            import &#123; ContactsService &#125; from '../../services/contacts.service';
+                            import &#123; FormBuilder, FormGroup, Validators &#125; from '@angular/forms';
+                            import &#123; ContactSubmission &#125; from '../../models/contact-submission';
+
+
+                            @Component(&#123;
+                              selector: 'app-contacts',
+                              templateUrl: './contacts.component.html',
+                              styleUrls: ['./contacts.component.css']
+                              &#125;)
+                          
+                            export class ContactsComponent implements OnInit&#123;
+                              contactSubmission: ContactSubmission;
+                              rForm: FormGroup;
+                              contactForm: NgForm;
+                              post: any;    // A property for our submitted form
+                              description: string = '';
+                              name: string = '';
+                              titleAlert:string = 'This field is required';
+                              email: string='';
+                              phone: string='';
+                              website: string='';
+                              contactModel: any=&#123;&#125;;
+                              submitted = false;
+                              charsLeft = 250;
+
+                        
+                            @ViewChild('contactForm') currentForm: NgForm;
+                              submittedForm: any; // we will get rid of this later
+                              formErrors = &#123;
+                              'contactName': '',
+                              'contactEmail': '',
+                              'contactMessage': ''
+                              &#125;;
+                              validationMessages = &#123;
+                              'contactName': &#123;
+                              'required': 'Name is required.'
+                              &#125;,
+                              'contactEmail': &#123;
+                                'required': 'Email is required.',
+                                'email': 'Email must be in a valid format.'
+                              &#125;,
+                              'contactMessage': &#123;
+                                'required': 'A message is required.'
+                              &#125;
+                            &#125;;
+                            
+                      
+                            constructor(private fb: FormBuilder, private contactService: ContactsService) &#123;
+                                this.contactSubmission= new ContactSubmission()
+                            &#125;
+                            
+                            sendContactMsg(event)&#123;
+                              this.contactService.sendContactMsg(this.contactModel).subscribe()
+                            &#125;      
+
+                            createMassage() &#123;
+                                this.rForm = this.fb.group(&#123;
+                                'name' : [this.contactSubmission.contactName, Validators.required],
+                                'email':[this.contactSubmission.contactEmail ,Validators.compose([Validators.email, Validators.required])],
+                                'phone': [this.contactSubmission.contactPhone, Validators.required], 
+                                'website': [this.contactSubmission.contactWebsite, Validators.required],
+                                'description' : [this.contactSubmission.contactMessage, Validators.compose([Validators.required, Validators.minLength(30), Validators.maxLength(500)])],
+                                'validate' : '',
+                                
+                              &#125;);
+
+                              this.rForm.valueChanges.subscribe(data => this.onValueChanged(data));
+                              this.onValueChanged();
+                            &#125;
+
+                            ngOnInit()&#123;
+                              this.createMassage();
+                            &#125;
+
+                            private onValueChanged(data?: any) &#123;
+                              if (!this.rForm) &#123; return; 
+                              &#125;
+                              const form = this.rForm;
+
+                              for (const field in this.formErrors) &#123;
+                                // clear previous error message (if any)
+                                this.formErrors[field] = '';
+                                const control = form.get(field);
+
+                                if (control && control.dirty && control.invalid) &#123;
+                                  const messages = this.validationMessages[field];
+                                  
+                                  for (const key in control.errors) &#123;
+                                    this.formErrors[field] += messages[key] + ' ';
+                                  &#125;
+                                &#125;
+                              &#125;
+                            &#125;
+                            
+                            submit() &#123;
+
+                              this.contactSubmission = this.rForm.value;
+                              this.contactService.sendContactMsg(this.contactSubmission).
+                              subscribe(data => &#123;
+                              this.contactSubmission = data; 
+                              &#125;);
+                              this.rForm.reset(); 
+                              
+                              console.log(JSON.stringify(this.contactSubmission));
+                            &#125;
+                          &#125;
+  </prism >
+      </mat-tab>
+      <mat-tab label="contacts.service.ts"><prism language="typescript" >
+              
+                              import &#123; HttpClient ,HttpRequest &#125; from '@angular/common/http';
+                              import &#123; Injectable, Input &#125; from '@angular/core';
+                              import 'rxjs/add/operator/map';
+                              import 'rxjs/add/operator/do';
+                              import 'rxjs/add/operator/filter';
+                              import 'rxjs/add/operator/catch';
+                              import &#123; Observable &#125; from 'rxjs/Rx';
+                              import &#123; ContactSubmission &#125; from '../models/contact-submission';
+
+
+                              @Injectable()
+                              export class ContactsService &#123;
+                                contactSubmission : ContactSubmission [];
+                                constructor(private http: HttpClient ) &#123;&#125;
+                                
+                                public sendContactMsg(contactSubmission: ContactSubmission): 
+                                  Observable &lt;ContactSubmission&gt; &#123;
+                                  return this.http.post&lt;ContactSubmission&gt;('api/contacts/sendContactMsg', contactSubmission);
+                                &#125;
+                              &#125;            
+          </prism>
+          </mat-tab>
+  <mat-tab label="contact-submission.ts">
+  <prism language="typescript" >
+    export class ContactSubmission
+     {{'{'}}
+     public date: Date;
+     public contactName: string;
+     public contactEmail: string;
+     public contactMessage: string;
+     public contactWebsite: string;
+     public contactPhone: string;
+     public captcha: string;
+     }
+           </prism>
+  </mat-tab>
+</mat-tab-group>

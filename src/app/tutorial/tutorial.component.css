@@ -11,3 +11,7 @@ pre {
   color:white;
   background-color: #333;
 }
+#phoneTutorial{
+  width: 100%;
+  text-align: center;
+}

@@ -1,6 +1,6 @@
 import { Directive , Input, Output} from '@angular/core';
 import {GoogleMapsAPIWrapper} from '@agm/core';
-declare var google: any;
+declare const google: any;
 @Directive({
   selector: 'appGoogleMapDirections'
 })
@@ -22,10 +22,10 @@ export class GoogleMapDirective {
                 return;
               }
               
-              var directionsService = new google.maps.DirectionsService;
-              var me = this;
-              var latLngA = new google.maps.LatLng({lat: this.origin.latitude, lng: this.origin.longitude });
-              var latLngB = new google.maps.LatLng({lat: this.destination.latitude, lng: this.destination.longitude });
+              let directionsService = new google.maps.DirectionsService;
+              let me = this;
+              let latLngA = new google.maps.LatLng({lat: this.origin.latitude, lng: this.origin.longitude });
+              let latLngB = new google.maps.LatLng({lat: this.destination.latitude, lng: this.destination.longitude });
               this.directionsDisplay.setMap(map);
               this.directionsDisplay.setOptions({
                 polylineOptions: {
@@ -46,7 +46,7 @@ export class GoogleMapDirective {
                                   me.directionsDisplay.setDirections(response);
                                   map.setZoom(30);
                                   //console.log(me.getcomputeDistance (latLngA, latLngB));
-                                  var point = response.routes[ 0 ].legs[ 0 ];
+                                  let point = response.routes[ 0 ].legs[ 0 ];
                                   me.estimatedTime = point.duration.text ;
                                   me.estimatedDistance = point.distance.text;
                                   console.log(me.estimatedTime);

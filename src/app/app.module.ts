@@ -53,8 +53,6 @@ const appRoutes: Routes =  [
   {path:'', component: HomeComponent},
   {path:'Trip', component: TripComponent},
   {path:'Contacts', component: ContactsComponent},
-  
-  
 ]
 
 

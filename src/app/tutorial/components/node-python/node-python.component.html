@@ -4,25 +4,454 @@
 <p>
 
 The growing popularity of node js in recent years is amazing.
-The large amount of npm open source free packages and the large amount of tutorials are pots node in a spot of an attractive server side framework to work with.
+The large amount of npm open source free packages and the large amount of tutorials pots node in a spot of an attractive server side framework to work with.
 Add to this the consideration of growing usage of java scripts client side framework, 
 Such as Angular and react js, you can imagine the advantage of working on the same language both back and front ends.   
 Node is a JavaScript runtime built on Chrome's V8 JavaScript engine. It uses an event-driven, non-blocking I/O model to be both lightweight and efficient for server side applications
 Lets see the difference between node to php on handling a file request to server:
+<br>
 In php:
 <li>1.	Sends the task to the computer's file system.</li>
 <li>2.	Waits while the file system opens and reads the file.</li>
 <li>3.	Returns the content to the client.</li>
 <li>4.	Ready to handle the next request.</li>
+<br>
 In node:
 <li>1.	Sends the task to the computer's file system.</li>
 <li>2.	Ready to handle the next request.</li>
 <li>3.	When the file system has opened and read the file, the server returns the content to the client.</li>
+<br>
 As you can imagine node is much faster
 It eliminates the waiting, and simply continues with the next request.  
 This is doe to the unique event-driven module.
-On the other hand python rocks any analytical development such as ML , data scince , statistics and math doe to some strong modules such as numpy, nltk and more.  So in this tutorial ill take all the way to configure node + with python. This solution is grate for reducing development time
-
-
+On the other hand python rocks any analytical development such as ML, data science, statistics and math doe to some strong modules such as numpy, nltk and more.  So in this tutorial ill take all the way to configure node + with python.
+This solution is grate for reducing development time.
 </p>
+<p>First let's see what npm and python module`s we need for this tutorial:</p>
+
+   <table>
+    <thead>
+          
+           <th>Node js</th>
+           <th>python</th>
+    </thead>
+    <tr>
+       
+        <td>express</td>
+        <td>numpy</td>
+    </tr>
+    <tr>
+    
+        <td>ejs</td>
+        <td></td>
+    </tr>
+    <tr>
+      
+        <td>chartjs</td>
+        <td></td>
+   </tr>
+   <tr>
+       
+       <td>child_process</td>
+       <td></td>
+    </tr>          
+   </table> 
+
 </div>
+ <p>In your terminal create our project folder ,name it <strong>dna</strong> and enter the folder.</p>
+ <prism language="javascript" >~$ mkdir dna
+~$ cd dna  
+ </prism>
+ <p>npm is the node package manager, the commend <strong>npm init</strong> will Initialize our project
+    and will create us <strong>package.json</strong> file. </p>
+ <prism language="javascript" >~/dna$ npm init</prism>
+ <P>for our project replace the default entry point: (index.js) with server.js. Now lets add the node packages and save them 
+    in our package.json file py adding <strong>--save</strong>.
+ </P>
+ <prism language="javascript" >~/dna$ npm install --save express ejs chartjs</prism>
+ <prism language="javascript" >~/dna$ touch server.js</prism>
+ <p>server.js ...</p>
+ <prism language="javascript" >
+const express = require('express');
+const path = require('path');
+const port = 8010;
+const app = express();
+const http = require('http');//.Server(app);
+const index = require('./routes/index');
+
+//View Engine
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+app.engine('html', require('ejs').renderFile);
+
+// Set Static Folder
+
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use('/', index);
+
+const server = http.createServer(app);
+
+server.listen(process.env.PORT || 8010, function(){{'{'}}
+    console.log('Server started on port '+port);
+});
+ </prism>
+
+ <p>This is a standard express way to create a web app server. we set our templates path to a <strong>views</strong> folder, our static folder is <strong>public</strong>.
+    now lets make our modules directory and name it <strong>routes</strong> and create index.js file inside it. this way we can call the code
+    by <strong>const index = require('./routes/index');</strong> and then we add <strong>app.use('/', index);</strong> from our server.
+ </p>
+<p>Lets create our basic app structure</p>
+ <prism language="javascript" >
+~/dna$ mkdir routes
+~/dna$ mkdir public
+~/dna$ mkdir views
+~/dna$ cd routes
+~/dna/routes$ touch index.js
+~/dna$ cd views
+~/dna/views$ touch index.ejs       
+ </prism>
+
+ <prism language="haml">{{'<'}}td>{{'<'}}h4 class="list-group-item-heading">{{'<'}}%= seq.rna %>{{'<'}}/h4>{{'<'}}/td> </prism>
+ <p>with the express router you can post and get data from client to server like this</p>
+ <prism language="haml"> {{'<'}}form method="post" action="/send">        
+        {{'<'}}label style="font-size: 20px;">Enter some sequence:{{'<'}}/label>
+        
+        {{'<'}}input type="text" id="myDna" name="data" style="width: 300px; height:300px">
+        {{'<'}}input type="submit" value="Submit">
+     {{'<'}}/form></prism>
+  <p>in our index.js file in server we will  identify the request with /send</p>
+ <prism language="javascript" >
+ router.post('/send', function (req, res, next) {{'}'}}      
+ </prism>    
+  <p>for charting we use the chartjs npm package, basically it needs to get data points and lables array to draw chart with measures and it's headlines
+     again the ejs will help us here. 
+      </p>       
+ <prism language="haml">{{'<'}}script>
+ var ctx = document.getElementById('myChart').getContext('2d');
+ data = {{'{'}}
+    datasets: [{{'{'}}
+        data: {{'<'}}%- JSON.stringify(precentage); %>,
+        backgroundColor: [
+            "#2ecc71",
+            "#3498db",
+            "#95a5a6",
+            "#9b59b6",
+            "#f1c40f",
+            "#e74c3c",
+            "#34495e"
+      ],
+    }],
+
+    // These labels appear in the legend and in the tooltips when hovering different arcs
+    labels: <%- JSON.stringify(amino_name); %>
+};
+var myPieChart = new Chart(ctx,{{'{'}}
+    type: 'pie',
+    data: data,
+ 
+    options: {{'{'}}}
+});                           
+ {{'<'}}/script></prism>
+ <p>copy our full index.ejs file from this git <a href="https://github.com/gilmarom/dna-sequance/tree/master/views">link</a></p>
+ 
+ 
+ <prism language="javascript" >
+~/dna$ mkdir routes
+~/dna$ mkdir public
+~/dna$ mkdir views
+~/dna$ cd routes
+~/dna/routes$ touch index.js
+~/dna$ cd views
+~/dna/views$ touch index.ejs       
+ </prism>
+ <p>copy our full index.ejs file</p>
+
+ <p>
+     Now!!! The interesting part spawn with child_process, this library allows us to run process in the background without blocking the Node.js event loop. In our tutorial we will run 
+     python code to calculate and create our dna sequence, and return the answer to our main node js . no need to npm the child_process it is a standard library in node js.
+ </p>
+ <p>This is how we Initialize child_process, with python shell and the file path ./api/writeDna.py</p>
+  <prism language="javascript">
+    var data = req.body.data;
+    var spawn = require('child_process').spawn,
+    py = spawn('python', ['./api/writeDna.py']),
+    dataString = '';
+  </prism>    
+  <p>so py is our python spawn child_process,now lets insert data to the process</p>
+  <prism language="javascript" >
+    py.stdin.write(JSON.stringify(data));
+  </prism>
+  <p>now we will recive back from the python process the results and decide what to do with it in the end of the process</p>
+  <prism language="javascript" >
+       py.stdout.on('data', function(data){{'{'}}
+       dataString += data.toString();
+       console.log((dataString.replace("'",'"')), " dataString");
+    });
+            
+    py.stdout.on('end', function(){{'{'}}
+       dna = JSON.parse(dataString.replace(/'/g,'"'));
+       rna =[];
+       //for test only
+       for (i = 0; i < dna.length; i++) {{'{'}}
+        rna += dna[i].rna; 
+        console.log(rna[i], "  amino");
+       
+    }
+       res.redirect('/');   
+    });
+  </prism>
+
+
+ <p>
+    copy the full file routes/index.js
+ </p>
+ <prism language="javascript" >
+var express = require('express');
+var router = express.Router();
+var dna = {{'{'}} };
+var amino_name =[];
+var precentage = [];
+var aa={{'{'}}};
+var rna =[];
+
+router.get('/', function(req, res, next){{'{'}}
+    res.render('index', {{'{'}} dna : dna, amino_name : amino_name, precentage : precentage})        
+});
+
+router.post('/send', function (req, res, next) {{'{'}}
+    
+    var data = req.body.data;
+    var spawn = require('child_process').spawn,
+    py = spawn('python', ['./api/writeDna.py']),
+    dataString = '';
+    
+    py.stdout.on('data', function(data){{'{'}}
+       dataString += data.toString();
+       console.log((dataString.replace("'",'"')), " dataString");
+    });
+            
+    py.stdout.on('end', function(){{'{'}}
+       dna = JSON.parse(dataString.replace(/'/g,'"'));
+       rna =[];
+       //for test only
+       for (i = 0; i < dna.length; i++) {{'{'}}
+        rna += dna[i].rna; 
+        console.log(rna[i], "  amino");
+       
+    }
+       res.redirect('/');   
+    });
+     
+    py.stdin.write(JSON.stringify(data));
+    py.stdin.end();
+});
+
+router.post('/aminoAcidPrecentage', function(req,res,next){{'{'}}
+    amino_name = [];
+    precentage = []; 
+    var spawn = require('child_process').spawn,
+    py = spawn('python', ['./api/aminoAcid.py']),
+    data = rna,         
+    dataString = '';
+    
+    py.stdout.on('data', function(data){{'{'}}
+       dataString += data.toString();
+       
+    });
+            
+    py.stdout.on('end', function(){{'{'}}
+    aa = JSON.parse(dataString.replace(/'/g,'"'));
+    // this parsing is for creating to chart.js the lablels and datapoints array's // 
+    for (i = 0; i < aa.length; i++) {{'{'}}
+       amino_name.push(aa[i].amino_name); 
+       console.log(aa[i].amino_name, "  amino");
+       precentage.push(aa[i].precentage);
+    }
+                
+    res.redirect('/');   
+    });
+     
+    py.stdin.write(JSON.stringify(data));
+    py.stdin.end();
+  
+});
+
+module.exports = router;
+ </prism>
+ <p>
+
+ </p>
+   
+  <prism language="haml" ></prism>
+ <p>Let's put some commends in our terminal to create our python Api</p>
+ <prism language="javascript" >
+~/dna$ mkdir api
+~/dna$ cd api 
+~/dna/api$ touch writeDna.py
+~/dna/api$ touch amoinoAcid.py
+~/dna/api$ touch seqMatchers.py 
+ </prism>
+ <p>In python there isn't a switch case method instead, 
+      in my <strong>seqMatchers.py</strong> file I will create functions to map between the Nucleotide in the sequence I receive and 
+      to match the amino acids the sequence is build of. </p>
+ <prism language="python" >
+#here i create the matchers for writing dna rna and define the amino acids in the sequence#
+class matchers:
+
+    @staticmethod
+    def dnaMatch(argument = str):
+        switcher = {{'{'}}
+                    'a': 't',
+                    
+                    't': 'a', 
+                
+                    "c": 'g',
+                
+                    'g': 'c'           
+                    }
+            
+        return switcher.get(argument)
+
+    @staticmethod 
+    def rnaMatch(argument = str):
+        
+        switcher = {{'{'}}
+                    "t" : "a",
+                    "a" : "u",
+                    "c" : "g",
+                    "g" : "c",
+                    }  
+        return switcher.get(argument)
+
+    @staticmethod
+    def aminoMatch(argument = str):
+
+        switcher = {{'{'}}
+                "uuu":"phenylalanine", "uuc":"phenylalanine","uua":"leucine","uug":"leucine",
+                "ucu":"serine","ucc":"serine","uca":"serine","ucg":"serine",
+                "uau":"tyrosine","uac":"tyrosine","uaa":"stop","uag":"stop",
+                "ugu":"cysteine", "ugc":"cysteine", "uga":"stop","ugg":"tryptophan",
+                "cuu":"leucine","cuc":"leucine","cua":"leucine","cug":"leucine",
+                "ccu":"proline","ccc":"proline","cca":"proline","ccg":"proline",
+                "cau":"histidine","cac":"histidine","caa":"glutamine","cag":"glutamine",
+                "cgu":"arginine","cgc":"arginine","cga":"arginine","cgg":"arginine",
+                "auu":"isoleucine","auc":"isoleucine","aua":"isoleucine","aug":"methionine", 
+                "acu":"threonine","acc":"threonine","aca":"threonine","acg":"threonine", 
+                "aau":"asparagine","aac":"asparagine","aaa":"lysine","aag":"lysine", 
+                "agu":"serine","agc":"serine","aga":"arginine","agg":"arginine", 
+                "guu":"valine","guc":"valine","gua":"valine","gug":"valine",  
+                "gcu":"alanine","gcc":"alanine","gca":"alanine","gcg":"alanine",  
+                "gau":"aspartate","gac":"aspartate","gaa":"glutamate","gag":"glutamate",  
+                "ggu":"glycine","ggc":"glycine","gga":"glycine","ggg":"glycine",              
+                }      
+        
+        
+        return switcher.get(argument)    
+</prism>
+<p>In my <strong>writeDna.py</strong> file i receive the </p>
+ <prism language="python" >
+  
+import sys, json, numpy as np
+test = ["a", "t", "c", "g"]
+from seqMatchers import matchers as Matchers
+
+def writeDna(dna = str):
+ 
+   seq =[]
+   aminoAcid = []  
+   for i in range(1, len(dna)-1):
+        #check we get only a,c,g,t letters in the sequence#
+        if dna[i] == test[0] or dna[i]==test[1] or dna[i]==test[2] or dna[i]==test[3]:
+         
+         codingLine = dna[i]              
+         template = Matchers.dnaMatch(codingLine) 
+         rna = Matchers.rnaMatch(template)
+         seq.append({{'{'}} "location": i, "coding" : codingLine, "template": template, "rna": rna })
+                       
+        else:
+         print "error"  
+   print seq      
+   return seq 
+
+
+#Read data from stdin
+def read_in():
+    
+    lines = sys.stdin.readlines()
+         
+    dna = writeDna(lines[0])
+    
+    #Since our input would only be having one line, parse our JSON data from that
+    return json.loads(dna)
+
+def main():
+    #get our data as an array from read_in()
+    lines = read_in()
+    print lines 
+    #create a numpy array
+    np_lines = np.array(lines)
+    
+#start process
+if __name__ == '__main__':
+    main()
+ </prism> 
+ <p>Now!!! The interesting part spawn with <strong>child_process</strong>, this library allows us to run process in the 
+    background in our tutorial we will run python code to calculate and create our dna sequence,
+     and return the answer to our main node js . no need to npm the child_process it is a 
+     standard library in node js.</p>
+ <prism language="javascript" ></prism>
+ <p>In the <strong>aminoAcid.py</strong> we will use the numpy module to calculate the 
+     Distribution of percent of each amino in a sequence</p>
+ <prism language="python" >
+import sys, json, numpy as np
+from seqMatchers import matchers as Matchers
+  
+def aminoAcidPrecentage(mrna = str):  
+    
+    aminoAcid = []  
+    aminoAcidPrecent = []   
+    seq = list(mrna)
+    ## every 3 mrna creates the amino acid we need##
+    for i in range(0,len(seq)-4,3):        
+       rna = str(seq[i+1]) + str(seq[i+2]) + str(seq[i+3])
+       # mrna return the right amino acid
+       amino = Matchers.aminoMatch(rna)       
+       aminoAcid.append(amino)
+    np_amino = np.array(aminoAcid) 
+    
+    unique_elements, counts_elements = np.unique(np_amino, return_counts=True)
+    
+    index = 0
+    ## calculate precentage of the each amino in the dna##
+    for i in counts_elements:
+       
+       precentage = float(i)/(len(np_amino))*100
+       aminoAcidPrecent.append({{'{'}} "amino_name" : str(unique_elements[index]), "precentage" : precentage })       
+       index = index + 1
+        
+    print aminoAcidPrecent
+    return aminoAcidPrecent   
+    
+#Read data from stdin
+def read_in():
+    
+    lines = sys.stdin.readlines()     
+    aa = aminoAcidPrecentage(lines[0])
+    
+    #Since our input would only be having one line, parse our JSON data from that
+    return json.loads(aa)
+    
+def main():
+    #get our data as an array from read_in()
+    lines = read_in()
+    print lines 
+    #create a numpy array
+    np_lines = np.array(lines)
+    
+    
+#start process
+if __name__ == '__main__':
+    main()</prism>
+ 
+ 
