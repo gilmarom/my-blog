@@ -111,7 +111,7 @@ server.listen(process.env.PORT || 8010, function(){{'{'}}
 ~/dna$ cd views
 ~/dna/views$ touch index.ejs       
  </prism>
-
+ <p>To parse data on our template with ejs this is on way</p>
  <prism language="haml">{{'<'}}td>{{'<'}}h4 class="list-group-item-heading">{{'<'}}%= seq.rna %>{{'<'}}/h4>{{'<'}}/td> </prism>
  <p>with the express router you can post and get data from client to server like this</p>
  <prism language="haml"> {{'<'}}form method="post" action="/send">        
@@ -453,5 +453,9 @@ def main():
 #start process
 if __name__ == '__main__':
     main()</prism>
+
+  <p>Hope you have gut until here, we have coverd a lot here basic express server, child_process, creating charts with dynamic data according to user changes, ejs template
+     and numpy, you have a full app here. 
+  </p>
  
  
