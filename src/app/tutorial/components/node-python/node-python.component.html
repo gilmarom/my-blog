@@ -153,8 +153,8 @@ var myPieChart = new Chart(ctx,{{'{'}}
     options: {{'{'}}}
 });                           
  {{'<'}}/script></prism>
- <p>copy our full index.ejs file from this git <a href="https://github.com/gilmarom/dna-sequance/tree/master/views">link</a></p>
- 
+ <p>copy our full index.ejs file from my Git repository in this <a href="https://github.com/gilmarom/dna-sequance/tree/master/views">link</a></p>
+
  
  <prism language="javascript" >
 ~/dna$ mkdir routes
@@ -165,11 +165,9 @@ var myPieChart = new Chart(ctx,{{'{'}}
 ~/dna$ cd views
 ~/dna/views$ touch index.ejs       
  </prism>
- <p>copy our full index.ejs file</p>
-
  <p>
-     Now!!! The interesting part spawn with child_process, this library allows us to run process in the background without blocking the Node.js event loop. In our tutorial we will run 
-     python code to calculate and create our dna sequence, and return the answer to our main node js . no need to npm the child_process it is a standard library in node js.
+     Now!!! The interesting part, spawn with child_process, this library allows us to run process in the background without blocking the Node.js event loop. In our tutorial we will run 
+     python code to calculate and create our dna sequence, and return the answer to our main node js. no need to npm the child_process it is a standard library in node js.
  </p>
  <p>This is how we Initialize child_process, with python shell and the file path ./api/writeDna.py</p>
   <prism language="javascript">

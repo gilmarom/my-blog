@@ -8,7 +8,7 @@
   <button mat-menu-item>
     <a [routerLink]="['Tutorial/AngularBasic']" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Angular basic</a> 
   </button>
-  <button mat-menu-item disabled>
+  <button mat-menu-item >
      <a [routerLink]="['Tutorial/Tutorial-style']" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Style with Style</a>
   </button>
   <button mat-menu-item>
@@ -26,7 +26,7 @@
     
     
     <mat-nav-list style="position: fixed; top:60px; border-right:1px solid #16222c;" fxHide.xs="true">
-        <h3 matSubheader>Tutorial's</h3>
+        <h3 matSubheader>Tutorials</h3>
           <mat-list-item>
            <a [routerLink]="['Tutorial/AngularBasic']" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Angular basic</a>           
           </mat-list-item>  

@@ -50,9 +50,9 @@ import 'prismjs/components/prism-scss';
 import 'prismjs/components/prism-markup';
 
 const appRoutes: Routes =  [
-  {path:'', component: HomeComponent},
-  {path:'Trip', component: TripComponent},
-  {path:'Contacts', component: ContactsComponent},
+  {path:'', component: HomeComponent, pathMatch: 'full'},
+  {path:'Trip', component: TripComponent,pathMatch: 'full'},
+  {path:'Contacts', component: ContactsComponent, pathMatch: 'full'},
 ]
 
 
@@ -70,7 +70,6 @@ const appRoutes: Routes =  [
     AlertDirective,
     AlertComponent,
     ResturantListComponent,
-
     
   ],
   
