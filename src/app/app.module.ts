@@ -33,7 +33,7 @@ import { StyleTutorialComponent } from './tutorial/components/style-tutorial/sty
 // services //
 import { ContactsService } from './services/contacts.service';
 import { AlertService } from './services/alert.service';
-import { AboutComponent } from './components/about/about.component';
+
 import { FooterComponent } from './components/footer/footer.component';
 import { TripComponent } from './components/trip/trip.component';
 import { GoogleMapDirective } from './directives/google-map.directive';
@@ -63,7 +63,6 @@ const appRoutes: Routes =  [
     NavbarComponent,
     ContactsComponent,
     //TutorialComponent,
-    AboutComponent,
     FooterComponent,
     TripComponent,
     GoogleMapDirective,
