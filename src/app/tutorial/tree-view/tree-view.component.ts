@@ -42,7 +42,9 @@ export class TreeViewComponent  {
                    title:'contact-submmision.service.ts'
           }]
       },{title:'app.component.css'},{title:'app.component.html'},{title:'app.component.spec.ts'},{ title:'app.component.ts'},{title:'app.module.ts'}] 
-     }]
+     },
+     { title:'assets',className:'assetName', children:[{}]
+    }]
    }];
 
   basicApp = [

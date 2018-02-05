@@ -1,33 +1,37 @@
 
 <div fxLayout = "column"  fxLayoutAlign="center center" style="margin-top: 50px;">
-<h1>Create app with python for analytics and node as server</h1>
+<h1>Create app with python for analytics and node js as server</h1>
+<h3>dna analysis to save the world</h3>
 <p>
 
-The growing popularity of node js in recent years is amazing.
+The growing popularity of node js in recent years is amazing!!!.
 The large amount of npm open source free packages and the large amount of tutorials pots node in a spot of an attractive server side framework to work with.
 Add to this the consideration of growing usage of java scripts client side framework, 
-Such as Angular and react js, you can imagine the advantage of working on the same language both back and front ends.   
+Such as Angular and react js, you can imagine the advantage of working with the same language both back and front ends.   
 Node is a JavaScript runtime built on Chrome's V8 JavaScript engine. It uses an event-driven, non-blocking I/O model to be both lightweight and efficient for server side applications
-Lets see the difference between node to php on handling a file request to server:
-<br>
-In php:
+Lets see the difference between node to php on handling a file request to server:</p>
+<div>
+<h2>In php</h2>
+
 <li>1.	Sends the task to the computer's file system.</li>
 <li>2.	Waits while the file system opens and reads the file.</li>
 <li>3.	Returns the content to the client.</li>
 <li>4.	Ready to handle the next request.</li>
 <br>
-In node:
+<h2>In node</h2>
 <li>1.	Sends the task to the computer's file system.</li>
 <li>2.	Ready to handle the next request.</li>
 <li>3.	When the file system has opened and read the file, the server returns the content to the client.</li>
-<br>
+</div>
+<p>
 As you can imagine node is much faster
-It eliminates the waiting, and simply continues with the next request.  
+it eliminates the waiting, and simply continues with the next request.  
 This is doe to the unique event-driven module.
 On the other hand python rocks any analytical development such as ML, data science, statistics and math doe to some strong modules such as numpy, nltk and more.  So in this tutorial ill take all the way to configure node + with python.
 This solution is grate for reducing development time.
 </p>
-<p>First let's see what npm and python module`s we need for this tutorial:</p>
+<h4>Our dna analysis project</h4>
+<p>First let's see what npm and python modules we need for this tutorial:</p>
 
    <table>
     <thead>
@@ -111,15 +115,16 @@ server.listen(process.env.PORT || 8010, function(){{'{'}}
 ~/dna$ cd views
 ~/dna/views$ touch index.ejs       
  </prism>
- <p>To parse data on our template with ejs this is on way</p>
+ <p>This is one way To parse data on our template with ejs</p>
  <prism language="haml">{{'<'}}td>{{'<'}}h4 class="list-group-item-heading">{{'<'}}%= seq.rna %>{{'<'}}/h4>{{'<'}}/td> </prism>
- <p>with the express router you can post and get data from client to server like this</p>
- <prism language="haml"> {{'<'}}form method="post" action="/send">        
+ <p>with the express router you can post and get data from client to server using form element</p>
+ <prism language="haml"> 
+ {{'<'}}form method="post" action="/send">        
         {{'<'}}label style="font-size: 20px;">Enter some sequence:{{'<'}}/label>
         
         {{'<'}}input type="text" id="myDna" name="data" style="width: 300px; height:300px">
         {{'<'}}input type="submit" value="Submit">
-     {{'<'}}/form></prism>
+ {{'<'}}/form></prism>
   <p>in our index.js file in server we will  identify the request with /send</p>
  <prism language="javascript" >
  router.post('/send', function (req, res, next) {{'}'}}      
@@ -149,7 +154,6 @@ server.listen(process.env.PORT || 8010, function(){{'{'}}
 var myPieChart = new Chart(ctx,{{'{'}}
     type: 'pie',
     data: data,
- 
     options: {{'{'}}}
 });                           
  {{'<'}}/script></prism>
@@ -281,7 +285,6 @@ module.exports = router;
 
  </p>
    
-  <prism language="haml" ></prism>
  <p>Let's put some commends in our terminal to create our python Api</p>
  <prism language="javascript" >
 ~/dna$ mkdir api
@@ -347,7 +350,7 @@ class matchers:
         
         return switcher.get(argument)    
 </prism>
-<p>In my <strong>writeDna.py</strong> file i receive the </p>
+<p>In my <strong>writeDna.py</strong> file i receive the client string and compl</p>
  <prism language="python" >
   
 import sys, json, numpy as np
@@ -448,8 +451,8 @@ def main():
 if __name__ == '__main__':
     main()</prism>
 
-  <p>Hope you have gut until here, we have coverd a lot here basic express server, child_process, creating charts with dynamic data according to user changes, ejs template
-     and numpy, you have a full app here. 
+  <p>Hope you have You followed up until here, we have coverd a lot in this tutorial, basic express server, child_process, creating charts with dynamic data according to user changes, ejs template
+     and numpy, you have a full app here try to apply it in your project or to give your self a small tesk. 
   </p>
  
 

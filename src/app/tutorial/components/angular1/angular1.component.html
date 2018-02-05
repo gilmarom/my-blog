@@ -18,6 +18,7 @@
              component. an example of a service will be the communication between the client and server.</li>         
           </p>
           <br>
+           
           <h1>Modules</h1>
           
           <p><strong>NgModule</strong> is the first basic structure you meet when coding an app with Angular.
@@ -30,26 +31,8 @@
             <li>Provide services at the application level that any application component can use.</li>
           </p>
           <h3>here`s example of NgModule</h3>
-        
-          <p>I created an angular app by writing in the cmd</p>
-  <prism language="typescript"> ng new angular-src </prism>
-
-    this is how the basic stracture of most angular 4 apps look like, most 
-    of the tools souch as angular/cli, ionic and ex` will automatcliy 
-    preduce the rest of the files you need to set the enviornment you
-    need.
-    Add the components, services and models folders under the 
-    app folder, then go to the components folder and write:                                                                          
-                                                    
-  <prism language="typescript">ng g component "file name"</prism>
-            <p> and then go to the services folder and write:           
-                                  
-          <strong>ng g service "service name"</strong>       
-          </p>
-          <div>
-          <app-tree-view></app-tree-view>
-          </div>
-         <div>
+           
+             <div>
          <prism language="typescript" > import &#123; NgModule &#125; from '@angular/core';
  import &#123; BrowserModule &#125; from '@angular/platform-browser';    
  import &#123; RouterModule, Routes &#125; from '@angular/router';
@@ -73,6 +56,9 @@
                           
         </prism>
 </div>
+
+ 
+     
       <br> 
       <p>We can learn a lot from this example on how to work with Angular,
       <strong>The Providers and Declarations</strong> are the two main structures in the NgModule 
@@ -86,7 +72,25 @@
         the current module, for using them in another module you will need to export them.
         On the contrary, services you provided will be available / injectable anywhere in your app, 
         just by import the service to the providers as we did in the example above.  
-      </p>    
+      </p>
+       <p>we will create an angular app by writing in the cmd</p>
+       <div><prism language="typescript"> ng new angular-src </prism></div>
+      <p>
+        Add the components, services and models folders under the 
+        app folder in, then go to the components folder in your terminal and write:                                                                          
+      </p>                                                  
+      <div><prism language="typescript">ng g component "file name"</prism></div>
+      <p> and then go to the services folder and write: </p>          
+      <div><prism language="typescript">ng g service "service name"</prism></div>      
+           
+      <p>
+      This is how the basic stracture angular 4 apps usually looks like, most 
+      of the tools souch as angular/cli, ionic and ex` will automatcliy 
+      preduce the rest of the files needed to set your enviornment.
+      <strong>in Angular 2 above, importent to remeber static fiels must go only under the assets folder the cli created</strong>
+      </p>
+      
+      <app-tree-view></app-tree-view>
       <P>To be continue.....</P>
     </div>
  
