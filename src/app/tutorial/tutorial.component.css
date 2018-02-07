@@ -14,6 +14,9 @@ pre {
 #phoneTutorial{
   width: 100%;
   text-align: center;
+  position: fixed;
+  top:40px;
+  left:50;
 }
 mat-menu-item{
   background-color: red;
