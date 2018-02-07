@@ -131,7 +131,7 @@ server.listen(process.env.PORT || 8010, function(){{'{'}}
  </prism>    
   <p>for charting we use the chartjs npm package, basically it needs to get data points and lables array to draw chart with measures and it's headlines
      again the ejs will help us here. 
-      </p>       
+  </p>       
  <prism language="haml">{{'<'}}script>
  var ctx = document.getElementById('myChart').getContext('2d');
  data = {{'{'}}
@@ -203,7 +203,6 @@ var myPieChart = new Chart(ctx,{{'{'}}
        res.redirect('/');   
     });
   </prism>
-
 
  <p>
     copy the full file routes/index.js
@@ -281,9 +280,6 @@ router.post('/aminoAcidPrecentage', function(req,res,next){{'{'}}
 
 module.exports = router;
  </prism>
- <p>
-
- </p>
    
  <p>Let's put some commends in our terminal to create our python Api</p>
  <prism language="javascript" >

@@ -1,10 +1,9 @@
-
-<div id = "navbar" fxHide.xs="true">
+<div id = "navbar" fxHide.lt-md="true">
 <nav class="navbar navbar-default">
         <div class="fn" >
          <a [routerLink]="['/']"><button mat-buton [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Home</button></a>       
          <a [routerLink]="['/Trip']"><button  [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Example</button></a>                
-         <a [routerLink]="['/Tutorial']" title="Ceatch up with Angular 2/4"><button [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Tutorial</button></a>      
+         <a [routerLink]="['/Tutorial']" title="Ceatch up with Angular 2/4"><button [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Tutorials</button></a>      
          <a [routerLink]="['/Contacts']"><button [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Hire me</button></a>
             
         </div>       

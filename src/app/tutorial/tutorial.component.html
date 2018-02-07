@@ -1,9 +1,9 @@
 
-     
-<div id= "phoneTutorial" fxLayout fxLayout="row" fxLayoutAlign="start center" fxHide fxShow.xs="true">
+    <div id= "phoneTutorial" fxLayout fxLayout="row" fxLayoutAlign="start center" fxHide fxShow.lt-md="true">
    <button mat-icon-button [matMenuTriggerFor]="menu">
      more tutorials
-</button>
+    </button>
+    </div> 
 <mat-menu #menu="matMenu">
   <button mat-menu-item>
     <a [routerLink]="['Tutorial/AngularBasic']" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Angular basic</a> 
@@ -15,17 +15,17 @@
       <a [routerLink]="['Tutorial/Node-python']" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Node js + Python</a>
   </button>
 </mat-menu>
-</div>  
+ 
 <div class="container"
      fxLayout
-     fxLayout.xs="row"
+     fxLayout.lt-md="row"
      fxLayoutAlign="center center"
      fxLayoutGap="10px"
-     fxLayoutGap.xs="0">
+     fxLayoutGap.lt-md="0">
     <div class="item item-1" fxFlex="20%" >
     
     
-    <mat-nav-list style="position: fixed; top:60px; border-right:1px solid #16222c;" fxHide.xs="true">
+    <mat-nav-list style="position: fixed; top:60px; border-right:1px solid #16222c;" fxHide.lt-md="true">
         <h3 matSubheader>Tutorials</h3>
           <mat-list-item>
            <a [routerLink]="['Tutorial/AngularBasic']" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Angular basic</a>           

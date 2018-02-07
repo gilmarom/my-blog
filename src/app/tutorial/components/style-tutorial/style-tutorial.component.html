@@ -82,8 +82,8 @@
 </tbody>
 </table>
 <p>Breakpoint aliases:</p>
-<table style="height: 333px; border-color:gray;">
-<thead style="background:gray;">
+<table>
+<thead>
 <tr>
 <th>breakpoint</th>
 <th>mediaQuery</th>
@@ -91,48 +91,70 @@
 </thead>
 <tbody>
 <tr>
-<td>&#8220;&#8221;</td>
-<td>&#8216;screen&#8217;</td>
-</tr>
-<tr>
 <td>xs</td>
-<td>&#8216;screen and (max-width: 599px)&#8217;</td>
-</tr>
-<tr>
-<td>gt-xs</td>
-<td>&#8216;screen and (min-width: 600px)&#8217;</td>
+<td>'screen and (max-width: 599px)'</td>
 </tr>
 <tr>
 <td>sm</td>
-<td>&#8216;screen and (min-width: 600px) and (max-width: 959px)&#8217;</td>
-</tr>
-<tr>
-<td>gt-sm</td>
-<td>&#8216;screen and (min-width: 960px)&#8217;</td>
+<td>'screen and (min-width: 600px) and (max-width: 959px)'</td>
 </tr>
 <tr>
 <td>md</td>
-<td>&#8216;screen and (min-width: 960px) and (max-width: 1279px)&#8217;</td>
-</tr>
-<tr>
-<td>gt-md</td>
-<td>&#8216;screen and (min-width: 1280px)&#8217;</td>
+<td>'screen and (min-width: 960px) and (max-width: 1279px)'</td>
 </tr>
 <tr>
 <td>lg</td>
-<td>&#8216;screen and (min-width: 1280px) and (max-width: 1919px)&#8217;</td>
-</tr>
-<tr>
-<td>gt-lg</td>
-<td>&#8216;screen and (min-width: 1920px)&#8217;</td>
+<td>'screen and (min-width: 1280px) and (max-width: 1919px)'</td>
 </tr>
 <tr>
 <td>xl</td>
-<td>&#8216;screen and (min-width: 1920px)&#8217;</td>
+<td>'screen and (min-width: 1920px) and (max-width: 5000px)'</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>lt-sm</td>
+<td>'screen and (max-width: 599px)'</td>
+</tr>
+<tr>
+<td>lt-md</td>
+<td>'screen and (max-width: 959px)'</td>
+</tr>
+<tr>
+<td>lt-lg</td>
+<td>'screen and (max-width: 1279px)'</td>
+</tr>
+<tr>
+<td>lt-xl</td>
+<td>'screen and (max-width: 1919px)'</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>gt-xs</td>
+<td>'screen and (min-width: 600px)'</td>
+</tr>
+<tr>
+<td>gt-sm</td>
+<td>'screen and (min-width: 960px)'</td>
+</tr>
+<tr>
+<td>gt-md</td>
+<td>'screen and (min-width: 1280px)'</td>
+</tr>
+<tr>
+<td>gt-lg</td>
+<td>'screen and (min-width: 1920px)'</td>
 </tr>
 </tbody>
 </table>
- 
+ <br>
+  <prism language="javascript">npm install @angular/flex-layout@latest --save</prism>
+<p>In our ng module</p>
   <pre>
  
  import &#123; FlexLayoutModule &#125; from '@angular/flex-layout';
