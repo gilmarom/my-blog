@@ -1,6 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div id='phoneMenu' fxLayout fxLayout="row" fxLayoutAlign="start center" fxHide fxShow.lt-md="true">
-    <mat-menu #appMenu="matMenu">
+    <mat-menu #appMenu="matMenu" id="nav" >
           
          <div><a [routerLink]="['/']"><button [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Home</button></a></div>       
          <div><a [routerLink]="['/Trip']"><button [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Example</button></a> </div>               
@@ -13,6 +13,8 @@
         <mat-icon>menu</mat-icon>
     </button>
 </div>
+
+
 
     <app-navbar></app-navbar>
      
