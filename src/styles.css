@@ -3,5 +3,9 @@
 @import '~angular-tree-component/dist/angular-tree-component.css';
 @import '~prismjs/themes/prism.css';
 
-
+body
+    { 
+        display: block;
+        margin: 0px;
+    }
 

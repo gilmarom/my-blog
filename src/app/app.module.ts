@@ -13,7 +13,7 @@ import { AngularMaterialModule } from './angular-material/angular-material.modul
 
 // tutorial's modules//
 import { TutorialModule } from './tutorial/tutorial.module';
-
+import { ChartsModule } from 'ng4-charts/ng4-charts';
 // map//
 import { AgmCoreModule } from '@agm/core';
 
@@ -28,12 +28,12 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
-
+import { DnaComponent } from './components/dna/dna.component';
 import { StyleTutorialComponent } from './tutorial/components/style-tutorial/style-tutorial.component';
 // services //
 import { ContactsService } from './services/contacts.service';
 import { AlertService } from './services/alert.service';
-
+import { DnaService } from './services/dna.service';
 import { FooterComponent } from './components/footer/footer.component';
 import { TripComponent } from './components/trip/trip.component';
 import { GoogleMapDirective } from './directives/google-map.directive';
@@ -49,10 +49,12 @@ import 'prismjs/components/prism-typescript';
 import 'prismjs/components/prism-scss';
 import 'prismjs/components/prism-markup';
 
+
 const appRoutes: Routes =  [
   {path:'', component: HomeComponent, pathMatch: 'full'},
   {path:'Trip', component: TripComponent,pathMatch: 'full'},
   {path:'Contacts', component: ContactsComponent, pathMatch: 'full'},
+  {path:'Dna', component: DnaComponent}
 ]
 
 
@@ -63,12 +65,14 @@ const appRoutes: Routes =  [
     NavbarComponent,
     ContactsComponent,
     //TutorialComponent,
+    DnaComponent,
     FooterComponent,
     TripComponent,
     GoogleMapDirective,
     AlertDirective,
     AlertComponent,
     ResturantListComponent,
+    DnaComponent,
     
   ],
   
@@ -88,9 +92,10 @@ const appRoutes: Routes =  [
     AngularMaterialModule,
     TutorialModule,
     RouterModule.forRoot(appRoutes),
+    ChartsModule,
     
   ],
-  providers: [ ContactsService, AlertService, GoogleMapDirective ],
+  providers: [ ContactsService, AlertService, GoogleMapDirective, DnaService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

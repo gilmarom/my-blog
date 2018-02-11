@@ -34,7 +34,8 @@ import { ObserversModule } from '@angular/cdk/observers';
     MatProgressSpinnerModule,
     MatTabsModule,
     MatToolbarModule,
-    MatGridListModule  
+    MatGridListModule,
+      
   ]
 })
 
