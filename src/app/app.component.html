@@ -1,19 +1,14 @@
 <!--The content below is only a placeholder and can be replaced.-->
-    <div id='phoneMenu' fxLayout fxLayout="row" fxLayoutAlign="start center" fxHide fxShow.lt-md="true">
-    <mat-menu #appMenu="matMenu" id="nav" >
-          
-         <div><a [routerLink]="['/']"><button [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Home</button></a></div>       
-         <div><a [routerLink]="['/Trip']"><button [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Example</button></a> </div>               
-         <div><a [routerLink]="['/Tutorial']" title="Ceatch up with Angular 2/4"><button [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Tutorials</button></a></div>      
-         <div><a [routerLink]="['/Contacts']"><button [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Hire me</button></a></div>
-     
-    </mat-menu>
-    
-    <button mat-icon-button [matMenuTriggerFor]="appMenu">
-        <mat-icon>menu</mat-icon>
+    <div id='phoneMenu' fxLayout="row" fxLayoutAlign="start center" fxHide fxShow.lt-md="true">
+    <button (click)="toggleMenu()">
+     <mat-icon>menu</mat-icon>
     </button>
+       <app-sidenav [@slideInOut]="menuState" id="sidenav">
+       </app-sidenav>
+    
     </div> 
-     
+    
+      
       
     <app-navbar></app-navbar>
    

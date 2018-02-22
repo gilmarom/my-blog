@@ -1,15 +1,17 @@
 
 
 
-
-<div id = "navbar" fxHide.lt-md="true">
-<nav class = "navbar navbar-default">
-        <div class="fn" >
-         <a [routerLink]="['/']"><button mat-buton [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Home</button></a>       
-         <a [routerLink]="['/Trip']"><button  [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Example</button></a>                
-         <a [routerLink]="['/Tutorial']" title="Ceatch up with Angular 2/4"><button [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Tutorials</button></a>      
-         <a [routerLink]="['/Contacts']"><button [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Hire me</button></a>
-            
-        </div>       
+<nav class="nav" fxHide.lt-md="true">
+    <ul>
+        <li><a [routerLink]="['/']"><button [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Home</button></a></li>
+        <li class="nav-submenu"><a id="buttonhref"><button [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Example</button></a>
+            <ul>
+                <li><a [routerLink]="['/Trip']"><button [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Trip</button></a></li>
+                <li><a [routerLink]="['/Dna']"><button [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Dna</button></a></li>
+            </ul>
+        </li>
+        <li><a [routerLink]="['/Tutorial']" title="Ceatch up with Angular 2/4"><button [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Tutorials</button></a></li>
+        <li><a [routerLink]="['/Contacts']"><button [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Hire me</button></a></li>
+    </ul>
 </nav>
-</div>
+ 

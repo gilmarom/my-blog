@@ -13,7 +13,7 @@ import { AngularMaterialModule } from './angular-material/angular-material.modul
 
 // tutorial's modules//
 import { TutorialModule } from './tutorial/tutorial.module';
-import { ChartsModule } from 'ng4-charts/ng4-charts';
+import { ChartsModule } from 'ng2-charts';
 // map//
 import { AgmCoreModule } from '@agm/core';
 
@@ -48,6 +48,7 @@ import 'prismjs/prism';
 import 'prismjs/components/prism-typescript';
 import 'prismjs/components/prism-scss';
 import 'prismjs/components/prism-markup';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
 
 
 const appRoutes: Routes =  [
@@ -73,6 +74,7 @@ const appRoutes: Routes =  [
     AlertComponent,
     ResturantListComponent,
     DnaComponent,
+    SidenavComponent,
     
   ],
   

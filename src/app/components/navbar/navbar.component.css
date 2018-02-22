@@ -1,29 +1,47 @@
 
-#navbar{
- display: flex;    
- padding-bottom: 0px;
- align-items: center;
- 
-}  
-.navbar {
-  overflow: hidden;
-  background-color: #333;
+
+ .nav
+ {
+  background-color: black; 
   position: fixed;
   top: 0;
   width: 100%;
   z-index:1; /*so elements cant go above the navbar*/
   height: 50px;
-}
-.navbar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-.navbar button {
-  background-color: #333;
-  color: white;    
-}
+ } 
+ .nav li {
+    width: 130px;
+    border-bottom: none;
+    height: 30px;
+    line-height: 20px;
+    font-size: 20px;
+    display: inline-block;
+    margin-right: -4px;
+  }
+   
+  .nav a {
+    border-bottom: none;
+  }
+  
+  .nav > ul > li {
+    text-align: center;
+  }
+
+  .nav > ul > li > a {
+    padding-left: 0;
+  }
+
+  /* Sub Menus */
+  .nav li ul {
+    position: absolute;
+    display: none;
+    width: inherit;
+  }
+
+  .nav li:hover ul {
+    display: block;
+  }
+   
+  .nav li ul li {
+    display: block;
+  }

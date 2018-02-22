@@ -1,15 +1,43 @@
 
-<div>
+
+<div id="contant">
+      <h3>Insert a string with the <strong>a t c g</strong> letters in multiples of 3 and see how our project will complete our sequence</h3>
+      <form [formGroup]="seqForm">  
+          <button (click)="writeDna()">write dna</button> 
+        <div class="form-group">   
+          <textarea id="seqstring" type="text" formControlName='sequence'></textarea>      
+        </div>
+      </form>
+     <div id="table-wrapper"  style="width:50%">
+        <div id="table-scroll">
+          <table>
+            <thead>   
+             <th>code</th>
+             <th>templating</th>
+             <th>rna</th>
+          </thead>
+          <tbody>
+          <tr *ngFor="let letter of this.dnaArr" >
+          <td>{{ letter.code }}</td>
+          <td> {{ letter.templating}}</td>
+          <td>{{ letter.rna }}</td>
+          </tr>
+         </tbody> 
+        </table>
+     </div>
+     </div>
+      <br> 
+   <div><label>Press the Amino % button and see the distribution of amino acid in our sequence</label></div>
+   <div> <button (click)="aminoPrecetage()">Amino %</button> </div>
+   
   <div style="display: block">
-    <canvas baseChart
-            [datasets]="barChartData"
-            [labels]="barChartLabels"
-            [options]="barChartOptions"
-            [legend]="barChartLegend"
-            [chartType]="barChartType"
-            (chartHover)="chartHovered($event)"
-            (chartClick)="chartClicked($event)"></canvas>
+  <canvas baseChart
+          [data]="pieChartData"
+          [labels]="pieChartLabels"
+          [chartType]="pieChartType"
+          (chartHover)="chartHovered($event)"
+          (chartClick)="chartClicked($event)"></canvas>
   </div>
-  <button (click)="randomize()">Update</button>
-</div>
+ </div>
+  
 

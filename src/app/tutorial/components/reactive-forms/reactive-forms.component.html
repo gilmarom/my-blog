@@ -7,7 +7,7 @@
       <mat-tab-group style="width:100%">
            
       <mat-tab label="contacts.component.ts">
-            <prism language="typescript" >
+            <prism language="typescript">
 
 import &#123; Component, OnInit, AfterViewChecked, ViewChild, 
 OnChanges &#125; from '@angular/core';
@@ -67,7 +67,7 @@ import &#123; ContactSubmission &#125; from '../../models/contact-submission';
            sendContactMsg(event)&#123;
            this.contactService.sendContactMsg(this.contactModel).subscribe()
               &#125;      
-
+                
            createMassage() &#123;
             this.rForm = this.fb.group(&#123;
             'name' : [this.contactSubmission.contactName, Validators.required],

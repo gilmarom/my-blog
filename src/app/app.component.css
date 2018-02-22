@@ -1,9 +1,11 @@
 #phoneMenu
-{   width: 100%;
+{   
+    width: 100%;
     position: fixed;
     top: 0;
     background-color: black;
-   
+    height: 40px;
+     z-index: 1;
 }
 
 
@@ -19,19 +21,53 @@
     transition: 0.5s;
     padding-top: 60px;
 }
-.example-container {
-  width: 500px;
-  height: 300px;
-  border: 1px solid rgba(0, 0, 0, 0.5);
+.hamburger {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 70px;
+  height: 70px;
+  font-size: 0;
+  text-indent: -9999px;
+  cursor: pointer;
+  outline: none;
+  background: none;
+  border: 0;
+}
+ 
+ 
+.hamburger span {
+  display: block;
+  position: absolute;
+  top: 44px;
+  left: 18px;
+  right: 18px;
+  height: 8px;
+  background:#1a2580;
+}
+ 
+.hamburger span::before,
+.hamburger span::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: #1a2580;
+  content: "";
+}
+ 
+.hamburger span::before {
+  top: -20px;
+}
+ 
+.hamburger span::after {
+  bottom: -20px;
 }
 
-.example-sidenav-content {
-  display: flex;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-}
-
-.example-sidenav {
-  padding: 20px;
+#sidenav{
+ z-index:1; 
+  width: 60%;
 }
