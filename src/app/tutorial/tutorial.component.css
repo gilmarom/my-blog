@@ -49,7 +49,7 @@ button
 }
 
 #tutorialBut{
-   position: fixed;
+  position: fixed;
   top: 51px;
   width: 100%;
   z-index:1; /*so elements cant go above the navbar*/
