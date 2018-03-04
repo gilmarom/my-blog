@@ -2,12 +2,16 @@
 
  .nav
  {
-  background-color: black; 
+  background-color:white; 
   position: fixed;
   top: 0;
   width: 100%;
   z-index:1; /*so elements cant go above the navbar*/
   height: 50px;
+  -webkit-box-shadow: 0 8px 6px -6px #999;
+  -moz-box-shadow: 0 8px 6px -6px #999;
+   box-shadow: 0 8px 6px -6px #999;
+   
  } 
  .nav li {
     width: 130px;
@@ -29,6 +33,7 @@
 
   .nav > ul > li > a {
     padding-left: 0;
+    color: black;
   }
 
   /* Sub Menus */
@@ -36,6 +41,7 @@
     position: absolute;
     display: none;
     width: inherit;
+    color: black;
   }
 
   .nav li:hover ul {
@@ -44,4 +50,10 @@
    
   .nav li ul li {
     display: block;
+    color: black;
+  }
+
+    .nav li ul li a{
+    display: block;
+    color: black;
   }

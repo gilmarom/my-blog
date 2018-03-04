@@ -46,6 +46,7 @@ const tutorialRoutes: Routes =  [
     TreeModule,
     PrismModule,
 
+
   ],
   exports: [ TutorialComponent, StyleTutorialComponent,Angular1Component ], 
   declarations: [ TutorialComponent, StyleTutorialComponent, Angular1Component, TreeViewComponent, ReactiveFormsComponent, NodePythonComponent ],

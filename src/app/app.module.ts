@@ -14,6 +14,10 @@ import { AngularMaterialModule } from './angular-material/angular-material.modul
 // tutorial's modules//
 import { TutorialModule } from './tutorial/tutorial.module';
 import { ChartsModule } from 'ng2-charts';
+
+// articles module //
+import { ArticlesModule } from './articles/articles.module';
+
 // map//
 import { AgmCoreModule } from '@agm/core';
 
@@ -30,6 +34,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { DnaComponent } from './components/dna/dna.component';
 import { StyleTutorialComponent } from './tutorial/components/style-tutorial/style-tutorial.component';
+
 // services //
 import { ContactsService } from './services/contacts.service';
 import { AlertService } from './services/alert.service';
@@ -95,6 +100,7 @@ const appRoutes: Routes =  [
     TutorialModule,
     RouterModule.forRoot(appRoutes),
     ChartsModule,
+    ArticlesModule
     
   ],
   providers: [ ContactsService, AlertService, GoogleMapDirective, DnaService ],

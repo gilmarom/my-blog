@@ -3,15 +3,16 @@
 
 <nav class="nav" fxHide.lt-md="true">
     <ul>
-        <li><a [routerLink]="['/']"><button [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Home</button></a></li>
-        <li class="nav-submenu"><a id="buttonhref"><button [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Example</button></a>
+        <li><a [routerLink]="['/']" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Home</a></li>
+        <li class="nav-submenu"><a id="buttonhref" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Example</a>
             <ul>
-                <li><a [routerLink]="['/Trip']"><button [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Trip</button></a></li>
-                <li><a [routerLink]="['/Dna']"><button [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Dna</button></a></li>
+                <li><a [routerLink]="['/Trip']" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Trip</a></li>
+                <li><a [routerLink]="['/Dna']" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Dna</a></li>
             </ul>
         </li>
-        <li><a [routerLink]="['/Tutorial']" title="Ceatch up with Angular 2/4"><button [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Tutorials</button></a></li>
-        <li><a [routerLink]="['/Contacts']"><button [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Hire me</button></a></li>
+        <li><a [routerLink]="['/Tutorial']" title="Ceatch up with Angular 2/4" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Tutorials</a></li>
+        <li><a [routerLink]="['/Articles']"  [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Articles</a></li>
+        <li><a [routerLink]="['/Contacts']" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Hire me</a></li>
     </ul>
 </nav>
  
