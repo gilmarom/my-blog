@@ -11,7 +11,7 @@ export class Posts{
 }
 const POSTS =[
   new Posts(1,'MD Micheal Fossil','cure for Alzhaimer',"../assets/images/brain.jpg", 'this story is about to end and a new story is about to begin'),
-  new Posts(2,  'Prof. Routh Shterenberg', "Motazia and Dna", "../assets/images/dna.jpg", 'this story is about to end and a new story is about to begin')
+  new Posts(2,  'Prof. Roth Hershenberg', "Motazia and Dna", "../assets/images/dna.jpg", 'this story is about to end and a new story is about to begin')
 ] 
 
 import { Injectable } from '@angular/core';
