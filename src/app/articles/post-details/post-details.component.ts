@@ -11,14 +11,14 @@ import 'rxjs/add/operator/switchMap';
 })
 export class PostDetailsComponent implements OnInit {
 
-   post$: Observable<Posts>;
+  post$: Observable<Posts>;
   editId: number;
   constructor(
      private route: ActivatedRoute,
      private router: Router,
      private service: PostService
   ) {}
-
+  
   ngOnInit() {
      this.post$ = this.route.paramMap
       .switchMap((params: ParamMap) =>

@@ -30,11 +30,11 @@ const tutorialRoutes: Routes =  [
            { path:'', component: Angular1Component } ,
            { path:'Tutorial/Tutorial-style', component: StyleTutorialComponent } ,
            { path: 'Tutorial/AngularBasic', component:Angular1Component},
-           { path: 'Tutorial/Node-python', component:NodePythonComponent}
-        ]
-   },
-         
-]
+           { path: 'Tutorial/Node-python', component:NodePythonComponent},
+           { path: 'Tutorial/Interview', component:ReactiveFormsComponent}
+           ]
+          },       
+         ]
 
 @NgModule({
   imports: [
@@ -45,8 +45,6 @@ const tutorialRoutes: Routes =  [
     FlexLayoutModule,
     TreeModule,
     PrismModule,
-
-
   ],
   exports: [ TutorialComponent, StyleTutorialComponent,Angular1Component ], 
   declarations: [ TutorialComponent, StyleTutorialComponent, Angular1Component, TreeViewComponent, ReactiveFormsComponent, NodePythonComponent ],
