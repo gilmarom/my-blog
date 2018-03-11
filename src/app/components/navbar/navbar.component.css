@@ -11,7 +11,8 @@
   -webkit-box-shadow: 0 8px 6px -6px #999;
   -moz-box-shadow: 0 8px 6px -6px #999;
    box-shadow: 0 8px 6px -6px #999;
-   
+   transition: 0.3s;
+   opacity: 0.6;
  } 
  .nav li {
     width: 130px;
@@ -36,6 +37,7 @@
   .nav > ul > li > a {
     padding-left: 0;
     color: black;
+    opacity: 1;
     text-decoration: none;
     
   }
@@ -65,3 +67,9 @@
     display: block;
     color: black;
   }
+
+  .scrolled{
+  background-color: white;
+  transition: 1.5s;
+  opacity: 1;
+}

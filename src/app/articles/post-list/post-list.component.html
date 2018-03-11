@@ -3,33 +3,30 @@
      fxLayout
      fxLayout.lt-md='column'
      fxLayoutGap="10px"
-
      fxLayoutGap.lt-md="0" >
       <div class="item item-1" fxFlex="20%" fxFlexOrder.lt-md="2" >
           
           <div *ngFor='let p of post$ | async'
-             [class.selected]="p.id === selectedId"  style='margin-left:20px;'>
+             [class.selected]="p.id === selectedId" >
               <a [routerLink]="[p.id]" style="text-decoration: none;">
                <mat-card class="example-card" >
                   <mat-card-title>{{ p.title }}
                   </mat-card-title>
                   <mat-card-subtitle>{{ p.subtitle }}
                   </mat-card-subtitle>
-                  <img mat-card-image [src]='p.image' alt="Photo of a Shiba Inu">
+                  <img mat-card-image [src]='p.image' >
                   <mat-card-content>
                       <p>
                          {{ p.shortParagraph }}
                      </p>
                   </mat-card-content>
-                  <mat-card-actions>
-
-                  </mat-card-actions>
+                 
                </mat-card>
               </a>
               <br>
             </div>
       </div>
-      <div class="item item-1"  fxLayoutAlign="start start" fxFlex="60%" fxFlexOrder="1" fxLayoutGap="20px">
+      <div  fxLayoutAlign="center start" fxFlex="60%" fxFlexOrder="1" fxLayoutGap="20px">
     
              <router-outlet></router-outlet>
       </div>  

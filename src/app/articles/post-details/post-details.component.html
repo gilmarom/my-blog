@@ -1,13 +1,12 @@
- <div *ngIf="post$ | async as post">
+ <div *ngIf="post$ | async as post" >
   <mat-card>
-    <mat-card-title>{{ post.title }}
+    <mat-card-title> {{ post.title }}
     </mat-card-title>
-     <mat-card-subtitle>{{ post.subtitle }}
+     <mat-card-subtitle style='font-size:20px;'>{{ post.subtitle }}
      </mat-card-subtitle>   
      <mat-card-content>
-                    <div [innerHTML]="post.content"></div>
-                        
-                     
+                    <div [ngStyle.lt-md]="{'font-size':'22px'}" [innerHTML]="post.content"></div>
+                             
       </mat-card-content>
   </mat-card>
  </div>

@@ -229,7 +229,7 @@ export class TripComponent implements OnInit ,OnChanges {
       let request = {
       location: latlng,
       radius: 1000,
-      types: ["restaurant"]
+      types: ["hospital"]
       };
       console.log(service.nearbySearch(request, this.callback),2222);
   }
@@ -273,7 +273,7 @@ export class TripComponent implements OnInit ,OnChanges {
       let request = {
       location: latlng,
       radius: 1000,
-      types: ["restaurant"]
+      types: ["hospital"]
       };
       return new Promise((resolve,reject)=>{
           nearby.nearbySearch(request,function(results,status){

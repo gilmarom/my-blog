@@ -5,7 +5,7 @@ import 'rxjs/add/operator/map';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 let micheal=`<div style="margin-top: 50px;">
-<h1> Interview with M.D. Ph.D. Micheal B. Fossil</h1> 
+
 <p>
   Michael B. Fossel, got his M.D. at Stanford Medical School, Ph.D. in neurobiology at Stanford University. he was a professor of clinical medicine at Michigan State University and is the author of several books on aging, who is best known for his views on telomerase therapy as a possible treatment for cellular senescence. Fossel has appeared on many major news programs to discuss aging and has appeared regularly on National Public Radio (NPR). He is also a respected lecturer, author, and the founder and former editor-in-chief of the Journal of Anti-Aging Medicine (now known as Rejuvenation Research). The above is just scratching the surface of his work, to learn more about his contribution check his site <a href="http://www.michaelfossel.com/about-us">http://www.michaelfossel.com/about-us</a>.
 </p>
@@ -139,7 +139,7 @@ export class Posts{
   constructor(public id: number, public title: string,public subtitle : string, public image : string,public shortParagraph : string ,public content : string){} 
 }
 const POSTS =[
-  new Posts(1,'MD Micheal Fossil','cure for Alzhaimer',"../assets/images/brain.jpg",`"We intervene not only at the most fundamental level of the cascade of pathology in the CNS, but at the single most effective point of clinical (and financial) intervention".` ,micheal),
+  new Posts(1,'Interview with M.D. Micheal B. Fossil','cure for Alzhaimer',"../assets/images/brain.jpg",`"We intervene not only at the most fundamental level of the cascade of pathology in the CNS, but at the single most effective point of clinical (and financial) intervention".` ,micheal),
   
   new Posts(2,  'Prof. Ruth Hershenberg', "Mutation and Dna", "../assets/images/dna.jpg",'soon interview with ruth' ,ruth)
 ] 
