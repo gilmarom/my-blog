@@ -4,8 +4,12 @@
     position: fixed;
     top: 0;
     background-color: white;
+    border-bottom: '';
     height: 40px;
-     z-index: 1;
+    z-index: 1;
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+   -moz-box-shadow: 0 8px 6px -6px #999;
+   box-shadow: 0 8px 6px -6px #999; 
 }
 
 #nav {
@@ -34,6 +38,7 @@
   outline: none;
   background: none;
   border: 0;
+  
 }
  
 .hamburger span {
@@ -68,4 +73,8 @@
 #sidenav{
  z-index:1; 
   width: 60%;
+}
+
+button{
+  background-color: white;
 }

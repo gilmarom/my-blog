@@ -1,36 +1,52 @@
        
         
-        <div fxLayout='column' fxLayoutAlign='center center'style=" height:550px; background-image:url(../assets/images/leaf.jpg) ">
-          <p style="font-family:URW Chancery L, cursive; color:white; font-size:40px">Now is the time to create a better world.</p>
-          <div style="font-family:URW Chancery L, cursive; color:white; font-size:60px">Mendel Haim</div>
-          <div> </div>
+        <div fxLayout='column' fxLayoutAlign='center start' style=" height:550px; background-image:url(../assets/images/leaf.jpg) ">
+          <div style="font-family:URW Chancery L, cursive; color:white; font-size:33px; width:200px; margin-left:50px;">"Like a leaf clings
+            To the tree Oh my darling,
+            Cling to me"<br><div style="font-size:20px;">'Nina simone'</div>
+          </div>
+          
+          <div style="font-family:URW Chancery L, cursive; color:white; font-size:60px;  margin-left:35%;">Mendel Haim</div>
+          <div></div>
           <div></div>
         </div>
        
-       <div fxLayout='row' fxLayoutAlign='center start' style="padding-top:50px; ">
+     
+  
+     
+       <div  fxLayoutAlign='center center' [ngStyle.lt-md]="{'margin-left':'0%','width':'400px'}" style="height:350px; width:40%; margin-top:30px; margin-left:30%; box-shadow: 5px 10px 8px 10px #888888;">
         
-            <p style="width:400px; height:190px; color:blue">Gregor Johann Mendel ( 20 July 1822 – 6 January 1884)  was a scientist, Augustinian friar and abbot of St. Thomas' Abbey. Mendel was born in Silesian part of the Austrian Empire (today's Czech Republic) and gained posthumous recognition as the founder of the modern science of genetics Decades after his study. It was Inevitable to add to his name the word haim, meaning life in hebrew to push forward his inspiration in our vision.</p>
+            <div style="color:blue; ">Gregor Johann Mendel ( 20 July 1822 – 6 January 1884) was 
+              a scientist, Augustinian friar and abbot of St. Thomas' Abbey. 
+              Mendel was born in Silesian part of the Austrian Empire (today's Czech Republic) and gained
+              posthumous recognition as the founder of the modern science of genetics 3 Decades after his study. 
+              It was inevitable to add to 
+              his name the word Haim, meaning life in hebrew, this way i gratitude not only him but my grandfather
+              Menahem Mendelovitz whos nick name by his closest was Mendel Haim.</div>
             <img src='../assets/images/mendel.png'> 
                
         </div>
-           
-         
-     <div fxLayout='row' fxLayoutAlign='space-evenly center' style= 'width:100%; height:600px; margin-bottom:50px; padding-top:40px;'>
+      <div fxLayoutAlign='center center' style='color: yellowgreen; padding-top:30px;'><h1>Our Core values</h1></div>
+    
+    
+      <app-value-banner [vls]="vls"></app-value-banner>          
+     <div fxLayout='row' fxLayoutAlign='space-evenly center' style= 'width:100%; height:600px;  padding-top:30px;'>
         
         <div fxLayout='column' [ngStyle.lt-md]="{'width':'65%'}"  style='width:25%; height:100%;'>
             
-              <div style='height:34%;'>
+              <div style='height:33.3%;'>
                   <h2 style="font-family:URW Chancery L, cursive;">
                     Mission
                   </h2>    
                   <p style="font-size:18px; color:saddlebrown;" [ngStyle.lt-md]="{'font-size':'14px'}">
                    Mendelhaim is in a mission to bring cutting age technology into human health care, we belive
-                   creating inspiring content will angage researchers, developers, investors in extensive change in human health.  
+                   in creating inspiring content to angage researchers, developers and investors in
+                   health tech.  
                  </p>
               </div>  
                <div style='height:33%;'>
                 <h2 fxHide='true' fxShow.lt-md='true' style="font-family:URW Chancery L, cursive;" >Vision</h2>
-                <p fxHide='true' fxShow.lt-md='true' style="font-size:18px; color:saddlebrown;" [ngStyle.lt-md]="{'font-size':'14px'}">Human beans living their life to their
+                <p fxHide='true' fxShow.lt-md='true' style="font-size:18px; color:saddlebrown;" [ngStyle.lt-md]="{'font-size':'14px'}">Human beings living their life to their
                    full true potential, As simple as that.
                 </p>
               </div>
@@ -52,7 +68,7 @@
               </div>  
                <div style='height:33%;'>
                    <h2 style="font-family:URW Chancery L, cursive;">Vision</h2>
-                <p style="font-size:18px; color:saddlebrown;" >Human beans living their life to their
+                <p style="font-size:18px; color:saddlebrown;" >Human beings living their life to their
                    full true potential, As simple as that.</p>
               </div>
                <div style='height:33%;'>
@@ -60,5 +76,5 @@
             
           </div> 
      </div>
-      
+      <br>
        

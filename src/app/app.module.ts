@@ -34,17 +34,19 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { DnaComponent } from './components/dna/dna.component';
 import { StyleTutorialComponent } from './tutorial/components/style-tutorial/style-tutorial.component';
-
+import { ValueContentComponent } from './components/home/value-content.component';
 // services //
 import { ContactsService } from './services/contacts.service';
 import { AlertService } from './services/alert.service';
 import { DnaService } from './services/dna.service';
+import { ValuesService } from './services/values.service';
 import { FooterComponent } from './components/footer/footer.component';
 import { TripComponent } from './components/trip/trip.component';
 import { GoogleMapDirective } from './directives/google-map.directive';
 import { AlertDirective } from './directives/alert/alert.directive';
 import { AlertComponent } from './components/alert/alert.component';
 import { ResturantListComponent } from './components/trip/returant-list/returant-list.component';
+import { ValueDirective } from './components/home/value.directive';
 
 // Import your library
 import { PrismModule } from '@sgbj/angular-prism';
@@ -54,6 +56,8 @@ import 'prismjs/components/prism-typescript';
 import 'prismjs/components/prism-scss';
 import 'prismjs/components/prism-markup';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
+
+import { ValueBannerComponent } from './components/home/value-banner.component';
 
 
 const appRoutes: Routes =  [
@@ -80,7 +84,9 @@ const appRoutes: Routes =  [
     ResturantListComponent,
     DnaComponent,
     SidenavComponent,
-    
+    ValueBannerComponent,
+    ValueDirective,
+    ValueContentComponent
   ],
   
   imports: [
@@ -103,7 +109,8 @@ const appRoutes: Routes =  [
     ArticlesModule
     
   ],
-  providers: [ ContactsService, AlertService, GoogleMapDirective, DnaService ],
-  bootstrap: [ AppComponent ]
+  providers: [ ContactsService, AlertService, GoogleMapDirective, DnaService , ValuesService],
+  bootstrap: [ AppComponent ],
+  entryComponents:[ValueContentComponent]
 })
 export class AppModule { }
