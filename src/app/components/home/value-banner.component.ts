@@ -50,7 +50,7 @@ export class ValueBannerComponent implements OnInit , OnDestroy{
    getValue(){
       this.interval = setInterval(() => {
       this.loadComponent();
-    }, 3000);
+    }, 5000);
    } 
    
 }
