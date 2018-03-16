@@ -11,7 +11,7 @@ import { valueComponent} from './value-item';
                 
           <h3 style = 'margin-left:10%; font-family: Century Gothic, sans-serif;text-shadow: 2px 2px 8px brown;' ><strong>{{data.value}}</strong></h3>
       </div>
-      <p style= 'width:300px; padding-left:10%; color:blue;'>
+      <p style= 'width:300px; padding-left:10%; color:blue; font-size:18px;'>
       
          <strong>{{data.content}}</strong> 
     
