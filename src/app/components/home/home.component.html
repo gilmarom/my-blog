@@ -10,16 +10,21 @@
           <div style= 'text-shadow: 2px 2px 8px; font-size:33px; margin-left:25%;'>New Health Platform on the rise</div>
           <div></div>
         </div> 
-       <div  fxLayoutAlign='center center' [ngStyle.lt-md]="{'margin-left':'2%','width':'95%'}" style="height:400px; width:40%; margin-top:50px; margin-left:30%; box-shadow: 5px 10px 8px 10px #888888;">
-        
-            <div style="color:blue; padding-left: 2%;">Gregor Johann Mendel ( 20 July 1822 – 6 January 1884) was 
+       <div fxLayout='column'  fxLayoutAlign='center center'   [ngStyle.lt-md]="{'margin-left':'2%','width':'95%'}" style="height:100%; width:40%; margin-top:50px; margin-left:30%; box-shadow: 5px 10px 8px 10px #888888;">
+            
+            <div
+              fxFlexOrder="2" 
+              style="color: green; padding: 5%; font-family:URW Chancery L, cursive;font-size:22px;"
+              >Gregor Johann Mendel ( 20 July 1822 – 6 January 1884) was 
               a scientist, Augustinian friar and abbot of St. Thomas' Abbey. 
               Mendel was born in Silesian part of the Austrian Empire (today's Czech Republic) and gained
               posthumous recognition as the founder of the modern science of genetics 3 Decades after his study. 
               It was inevitable to add to 
               his name the word Haim, meaning life in hebrew, this way i gratitude not only him but my grandfather
               Menahem Mendelovitz whos nick name by his closest was Mendel Haim.</div>
-            <img src='../assets/images/mendel.png'> 
+            <img 
+            fxFlexOrder="1" 
+            src='../assets/images/mendel.png'> 
                
         </div>
       <div fxLayoutAlign='center center' style='color: yellowgreen; padding-top:70px;'><h1>Our Core values</h1></div>
@@ -27,8 +32,11 @@
     
       <app-value-banner [vls]="vls"></app-value-banner>          
      <div fxLayout='row' fxLayoutAlign='space-evenly center' style= 'width:100%; height:600px;  padding-top:100px;'>
-        
-        <div fxLayout='column' [ngStyle.lt-md]="{'width':'65%'}"  style='width:25%; height:100%;'>
+      
+        <!-- first column in mission chart !-->
+        <div fxLayout='column' 
+             [ngStyle.lt-md]="{'width':'65%'}"  
+             style='width:25%; height:100%;'>
             
               <div style='height:33.3%;'>
                   <h2 style="font-family:URW Chancery L, cursive;">
@@ -52,11 +60,13 @@
               </div>
             
           </div>  
-        
+         
+         <!-- second column in mission chart !-->
         <div fxLayout='column' [ngStyle.lt-md]="{'width' :'35%'}">
              <img style='height:450px;' src="../assets/images/chart.jpg">
         </div> 
-        
+         
+         <!-- thired column in mission chart !-->
         <div fxLayout='column'  style='width:25%; height:100%;' fxHide.lt-md='true'>
            
               <div style='height:33%;'>
@@ -64,8 +74,8 @@
               </div>  
                <div style='height:33%;'>
                    <h2 style="font-family:URW Chancery L, cursive;">Vision</h2>
-                <p style="font-size:18px; color:saddlebrown;" >Human beings living their life to their
-                   full true potential, As simple as that.</p>
+                   <p style="font-size:18px; color:saddlebrown;" >Human beings living their life to their
+                      full true potential, As simple as that.</p>
               </div>
                <div style='height:33%;'>
               </div>
