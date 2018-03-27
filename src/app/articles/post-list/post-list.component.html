@@ -1,32 +1,43 @@
-<div class="container"
+   <!-- Articles content section, need to be choosen from articles list  !-->
+  <div 
      fxShow
-     fxLayout
+     fxLayout ='row'
+     fxFlexLayout='center center'
+     fxLayout.lt-md='column'   
+     >
+    <div fxFlex='15%'>   
+    </div>
+   
+    <div style="padding:5%">     
+        <router-outlet></router-outlet> 
+    </div>
+     
+    <div fxFlex='15%'>   
+    </div>
+  </div>
+     <!-- !-->
+
+     <!-- List of Articels section uploads as router pressed articels !-->
+  <p class="articles-header">Articles</p>
+  <div class="container"
+     fxShow
+     fxLayout ='row'
+     fxFlexLayout='center center'
      fxLayout.lt-md='column'
-     fxLayoutGap.lt-md="0" >
-      <div class="item item-1" fxFlex="20%" fxFlexOrder.lt-md="2" >
-          
-          <div *ngFor='let p of post$ | async'
-             [class.selected]="p.id === selectedId" >
-              <a [routerLink]="[p.id]" style="text-decoration: none;">
-               <mat-card class="example-card" >
-                  <mat-card-title>{{ p.title }}
-                  </mat-card-title>
-                  <mat-card-subtitle>{{ p.subtitle }}
-                  </mat-card-subtitle>
-                  <img mat-card-image [src]='p.image' >
-                  <mat-card-content>
-                      <p>
-                         {{ p.shortParagraph }}
-                     </p>
-                  </mat-card-content>
-                 
-               </mat-card>
-              </a>
-              <br>
-            </div>
-      </div>
-      <div  fxLayoutAlign="center center" fxFlex="60%" fxLayoutGap='15px' fxLayoutGap.lt-md="0px" fxFlexOrder="1">
-    
-             <router-outlet></router-outlet>
-      </div>  
-</div>
+     >
+     <div fxFlex='20%' >
+     </div>   
+     <div fxFlexLayout='center center' fxLayout ='column' fxFlex="50%" fxFlexOrder.lt-md="2" style='padding:5%;'  >
+       <div *ngFor='let p of post$ | async'
+          [class.selected]="p.id === selectedId">
+          <a [routerLink]="[p.id]" style="text-decoration: none;">
+                
+            <div style="font-size:18px; color:green;">{{ p.title }}</div>      
+            <div style="font-size:16px; color:gray;">{{ p.subtitle }}</div>               
+            <p style="font-size:16px; color:gray; padding-left:50px">{{ p.shortParagraph }}</p>
+          </a>
+          <br>
+        </div>
+      </div>   
+  </div>
+            

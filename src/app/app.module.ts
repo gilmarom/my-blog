@@ -58,6 +58,7 @@ import 'prismjs/components/prism-markup';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 
 import { ValueBannerComponent } from './components/home/value-banner.component';
+import { AboutComponent } from './components/about/about.component';
 
 
 const appRoutes: Routes =  [
@@ -86,7 +87,8 @@ const appRoutes: Routes =  [
     SidenavComponent,
     ValueBannerComponent,
     ValueDirective,
-    ValueContentComponent
+    ValueContentComponent,
+    AboutComponent
   ],
   
   imports: [

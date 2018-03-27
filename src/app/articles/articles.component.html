@@ -1,6 +1,16 @@
-<div id='container' >
-   <p fxLayoutAlign='center center' style='font-size:35px; font-family: Merienda;'>
-       Our&nbsp;<span style='color: blue'>Sci</span>entific&nbsp;<span style='color: blue'>A</span><span style='color: red'>R</span><span style='color: green'>T</span>icles
-   </p>
-<router-outlet></router-outlet>
+ 
+<div id='container'>
+
+    <div 
+       fxShow
+       fxLayout
+       class="container"
+       fxLayoutAlign="center start"
+       fxLayoutGap.lt-md="0px">
+       
+     <div>
+        <router-outlet></router-outlet>
+     </div>    
+    </div>
 </div>
+

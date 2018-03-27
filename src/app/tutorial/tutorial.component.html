@@ -1,5 +1,5 @@
 
-<div  fxLayout fxLayout="row" fxLayoutAlign="start center" fxHide fxShow.lt-md="true">
+<div  fxLayout fxLayout="row" fxLayoutAlign="start center"  fxHide fxShow.lt-md="true">
    
     <button title="more tutorials" mat-icon-button [matMenuTriggerFor]="menu" id="phoneTutorial">
       <mat-icon>school</mat-icon>
@@ -20,15 +20,12 @@
  
 <div class="container"
      fxShow
-     
      fxLayout
      fxLayoutAlign="center center"
      fxLayoutGap="10px"
      fxLayoutGap.lt-md="0">
     <div class="item item-1" fxFlex="20%" fxHide.lt-md="true">
-    
-    
-    <mat-nav-list style="position: fixed; top:60px; border-right:1px solid #16222c;" >
+     <mat-nav-list style="position: fixed; top:60px; border-right:1px solid #16222c;" >
         <h3 matSubheader>Tutorials</h3>
           <mat-list-item>
            <a [routerLink]="['Tutorial/AngularBasic']" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Angular basic</a>           
@@ -40,10 +37,8 @@
           <mat-divider></mat-divider>   
              <mat-list-item>   
           <a [routerLink]="['Tutorial/Node-python']" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Node js + Python</a>
-        </mat-list-item>
-         
-                                      
-    </mat-nav-list>
+        </mat-list-item>                                  
+      </mat-nav-list>
     </div>
      
     <div class="item item-2" fxFlex="60%" fxFlex.lt-md="80%" >

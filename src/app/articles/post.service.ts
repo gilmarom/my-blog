@@ -4,18 +4,18 @@ import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/map';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
-let micheal=`<div style="margin-top: 50px;">
+let micheal=`<div>
 
 <p>
   Michael B. Fossel, got his M.D. at Stanford Medical School, Ph.D. in neurobiology at Stanford University. he was a professor of clinical medicine at Michigan State University and is the author of several books on aging, who is best known for his views on telomerase therapy as a possible treatment for cellular senescence. Fossel has appeared on many major news programs to discuss aging and has appeared regularly on National Public Radio (NPR). He is also a respected lecturer, author, and the founder and former editor-in-chief of the Journal of Anti-Aging Medicine (now known as Rejuvenation Research). The above is just scratching the surface of his work, to learn more about his contribution check his site <a href="http://www.michaelfossel.com/about-us">http://www.michaelfossel.com/about-us</a>.
 </p>
-<p>In our interview he takes us to his adventure on telocyte, a company he founded with Peter Rayson. <strong>Their mission is to cure Alzheimer’s</strong>, plain and simple, As they declare on their website. He explains us their innovative and unique approach and the Opportunity to invest in telocyte.<br><br>"Michael thank you so much for giving me this interview while i know you are so busy in research these day's".</p>
+<p>In our interview he takes us to his adventure with Telocyte, a company he founded with Peter Rayson. <strong>Their mission is to cure Alzheimer’s</strong>, plain and simple, As they declare on their website. He explains us their innovative and unique approach and the Opportunity to invest in telocyte.<br><br>"Michael thank you so much for giving me this interview while i know you are so busy in research these day's".</p>
 
 <p>
  q: So lets start with the explanation on how does AD develop?
 </p>
 <p> 
- a:  We have known for a century that patients with AD have amyloid plaques and tau tangles, but the unwarranted assumption has been that these are the cause (rather than the effect) of AD. Additional changes, such as inflammation, glial cell activation, mitochondrial changes, and dozens of specific changes in gene expression, have also been seen as “the” cause of AD. The reality is more complex. Indeed, there has been no trial that has ever shown that altering amyloid, tau, or other biomarkers have any effect on the course of the disease. We might better view AD as a cascade of complex pathology that results in clinical changes.  More importantly, understanding the fundamental elements of this cascade suggests that the single, most effective point of clinical intervention is well “upstream” and that the “downstream” events (such as amyloid plaques) are merely symptoms, hence ineffective as points of clinical intervention. In a simplified, broad outline, the AD pathology cascade is this:
+ a: We have known for a century that patients with AD have amyloid plaques and tau tangles, but the unwarranted assumption has been that these are the cause (rather than the effect) of AD. Additional changes, such as inflammation, glial cell activation, mitochondrial changes, and dozens of specific changes in gene expression, have also been seen as “the” cause of AD. The reality is more complex. Indeed, there has been no trial that has ever shown that altering amyloid, tau, or other biomarkers have any effect on the course of the disease. We might better view AD as a cascade of complex pathology that results in clinical changes.  More importantly, understanding the fundamental elements of this cascade suggests that the single, most effective point of clinical intervention is well “upstream” and that the “downstream” events (such as amyloid plaques) are merely symptoms, hence ineffective as points of clinical intervention. In a simplified, broad outline, the AD pathology cascade is this:
 </p>
 <ol>
 <li>
@@ -133,7 +133,7 @@ Thank you very much Micheal, and good luck on solving the problem it was a great
  
 </p>
 </div>`
-let ruth=`<h1>coming soon interview with Prof. Routh</h1>`;
+let ruth=`<div fxLayoutAlign="center center"><h1>coming soon interview with Prof. Routh</h1></div>`;
 
 export class Posts{
   constructor(public id: number, public title: string,public subtitle : string, public image : string,public shortParagraph : string ,public content : string){} 

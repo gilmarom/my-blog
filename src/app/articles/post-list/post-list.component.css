@@ -4,8 +4,15 @@
 
 .example-header-image {
   background-size: cover;
+   
 }
 
-container{
- 
+.articles-header{
+  font-size:16px; color:blue; padding-left:25%;text-decoration: underline;
+}
+
+@media only screen and (max-width: 992px){
+ .articles-header{
+   font-size:16px; color:blue; padding-left:5%;text-decoration: underline;
+ }
 }

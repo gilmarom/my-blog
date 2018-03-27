@@ -1,13 +1,6 @@
- <div *ngIf="post$ | async as post"  fxLayoutAlign='center center'>
-  <mat-card>
-    <mat-card-title> {{ post.title }}
-    </mat-card-title>
-     <mat-card-subtitle style='font-size:20px;'>{{ post.subtitle }}
-     </mat-card-subtitle>   
-     <mat-card-content>
-                    <div [ngStyle.lt-md]="{'font-size':'20px', 'margin':'15px'}" [innerHTML]="post.content"></div>
-                             
-      </mat-card-content>
-  </mat-card>
+ <div *ngIf="post$ | async as post">
+    <h1>{{ post.title }}</h1>
+    <h3>{{ post.subtitle }}</h3>
+       <div [ngStyle.lt-md]="{'font-size':'16px'}" [innerHTML]="post.content"></div>
  </div>
 

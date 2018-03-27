@@ -1,69 +1,44 @@
        
         
-        <div fxLayout='column' fxLayoutAlign='center start' style=" height:670px; font-family:URW Chancery L, cursive; color:white; background-image:url(../assets/images/leaf.jpg) ">
-          <div style="font-size:33px; width:200px; margin-left:50px;">"Like a leaf clings
-            To the tree Oh my darling,
-            Cling to me"<br><div style="font-size:20px;">'Nina Simone'</div>
-          </div>
+        <div fxLayout='column' fxLayoutAlign='center start' style=" height:550px; color:white; background-color:gainsboro; ">
           
-          <div style="font-size:60px;  margin-left:35%; text-shadow: 2px 2px 8px;">Mendel Haim</div>
-          <div style= 'text-shadow: 2px 2px 8px; font-size:33px; margin-left:25%;'>New Health Platform on the rise</div>
+          <div style= 'text-shadow: 2px 2px 8px black; width:50%; font-size:50px; margin-left:25%;'>New Health Platform on the rise</div>
           <div></div>
         </div> 
-       <div fxLayout='column'  fxLayoutAlign='center center'   [ngStyle.lt-md]="{'margin-left':'2%','width':'95%'}" style="height:100%; width:40%; margin-top:50px; margin-left:30%; box-shadow: 5px 10px 8px 10px #888888;">
-            
-            <div
-              fxFlexOrder="2" 
-              style="color: green; padding: 5%; font-family:URW Chancery L, cursive;font-size:22px;"
-              >Gregor Johann Mendel ( 20 July 1822 – 6 January 1884) was 
-              a scientist, Augustinian friar and abbot of St. Thomas' Abbey. 
-              Mendel was born in Silesian part of the Austrian Empire (today's Czech Republic) and gained
-              posthumous recognition as the founder of the modern science of genetics 3 Decades after his study. 
-              It was inevitable to add to 
-              his name the word Haim, meaning life in hebrew, this way i gratitude not only him but my grandfather
-              Menahem Mendelovitz whos nick name by his closest was Mendel Haim.</div>
-            <img 
-            fxFlexOrder="1" 
-            src='../assets/images/mendel.png'> 
-               
-        </div>
-      <div fxLayoutAlign='center center' style='color: yellowgreen; padding-top:70px;'><h1>Our Core values</h1></div>
-    
-    
-      <app-value-banner [vls]="vls"></app-value-banner>          
-     <div fxLayout='row' fxLayoutAlign='space-evenly center' style= 'width:100%; height:600px;  padding-top:100px;'>
       
+               
+     <div fxLayout='row' fxLayoutAlign='space-evenly center' style= 'width:100%; height:600px;'>
+         
         <!-- first column in mission chart !-->
         <div fxLayout='column' 
              [ngStyle.lt-md]="{'width':'65%'}"  
-             style='width:25%; height:100%;'>
+             style='width:25%; height:100%; padding:2%; '>
             
               <div style='height:33.3%;'>
-                  <h2 style="font-family:URW Chancery L, cursive;">
+                  <h2>
                     Mission
                   </h2>    
-                  <p style="font-size:18px; color:saddlebrown;" [ngStyle.lt-md]="{'font-size':'14px'}">
+                  <p style="font-size:18px;color:gray" [ngStyle.lt-md]="{'font-size':'14px'}">
                    Mendelhaim is in a mission to bring cutting age technology into human health care, we belive
                    in creating inspiring content to engage researchers, developers and investors in
                    health tech.  
                  </p>
               </div>  
-               <div style='height:33%;'>
-                <h2 fxHide='true' fxShow.lt-md='true' style="font-family:URW Chancery L, cursive;" >Vision</h2>
-                <p fxHide='true' fxShow.lt-md='true' style="font-size:18px; color:saddlebrown;" [ngStyle.lt-md]="{'font-size':'14px'}">Human beings living their life to their
+              <div style='height:33%;'>
+                 <h2 fxHide='true' fxShow.lt-md='true'>Vision</h2>
+                 <p fxHide='true' fxShow.lt-md='true' style="font-size:18px; color:gray;" [ngStyle.lt-md]="{'font-size':'14px'}">Human beings living their life to their
                    full true potential, As simple as that.
-                </p>
+                 </p>
               </div>
-               <div style='height:33%;'>
-                <h2 style="font-family:URW Chancery L, cursive;">Partnership</h2>
-                <p style="font-size:18px; color:saddlebrown;" [ngStyle.lt-md]="{'font-size':'14px'}">We are open minded, if you see a way you can engage in our vision contact us at mendelhaimbiz@gmail.com.</p>
+              <div style='height:33%;'>
+                <h2>Partnership</h2>
+                <p style="font-size:18px; color:gray;" [ngStyle.lt-md]="{'font-size':'14px'}">We are open minded, if you see a way you can engage in our vision contact us at mendelhaimbiz@gmail.com.</p>
               </div>
-            
           </div>  
          
          <!-- second column in mission chart !-->
-        <div fxLayout='column' [ngStyle.lt-md]="{'width' :'35%'}">
-             <img style='height:450px;' src="../assets/images/chart.jpg">
+        <div fxLayout='column' [ngStyle.lt-md]="{'width' :'40%'}">
+             <img style='height:450px;' src="../assets/images/chart-02.png">
         </div> 
          
          <!-- thired column in mission chart !-->
@@ -73,17 +48,13 @@
                  
               </div>  
                <div style='height:33%;'>
-                   <h2 style="font-family:URW Chancery L, cursive;">Vision</h2>
-                   <p style="font-size:18px; color:saddlebrown;" >Human beings living their life to their
+                   <h2>Vision</h2>
+                   <p style="font-size:18px; color:gray;" >Human beings living their life to their
                       full true potential, As simple as that.</p>
-              </div>
+               </div>
                <div style='height:33%;'>
               </div>
-            
           </div> 
      </div>
       <br>
-       <div style="padding-bottom:100px;  margin-left:10%; font-family:URW Chancery L, cursive;" >
-         <img style="height:150px; width:200; margin-left:10%;" src='../assets/images/s.png'>
-         <h1>Join the journey</h1>
-       </div>  
+       <app-contacts></app-contacts>

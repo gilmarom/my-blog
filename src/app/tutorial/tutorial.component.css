@@ -55,3 +55,10 @@ button
   z-index:1; /*so elements cant go above the navbar*/
 
 }
+
+@media only screen and (max-width: 992px){
+  p{
+    font-size: 13px;
+  }
+  
+}
