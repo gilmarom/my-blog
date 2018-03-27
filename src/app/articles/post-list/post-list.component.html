@@ -5,14 +5,14 @@
      fxFlexLayout='center center'
      fxLayout.lt-md='column'   
      >
-    <div fxFlex='15%'>   
+    <div fxFlex='15%' fxHide.lt-md="true">   
     </div>
    
-    <div style="padding:5%">     
+    <div fxFlex='60%'  style="padding:5%">     
         <router-outlet></router-outlet> 
     </div>
      
-    <div fxFlex='15%'>   
+    <div fxFlex='15%'fxHide.lt-md="true">   
     </div>
   </div>
      <!-- !-->
@@ -30,8 +30,7 @@
      <div fxFlexLayout='center center' fxLayout ='column' fxFlex="50%" fxFlexOrder.lt-md="2" style='padding:5%;'  >
        <div *ngFor='let p of post$ | async'
           [class.selected]="p.id === selectedId">
-          <a [routerLink]="[p.id]" style="text-decoration: none;">
-                
+          <a [routerLink]="[p.id]" style="text-decoration: none;">             
             <div style="font-size:18px; color:green;">{{ p.title }}</div>      
             <div style="font-size:16px; color:gray;">{{ p.subtitle }}</div>               
             <p style="font-size:16px; color:gray; padding-left:50px">{{ p.shortParagraph }}</p>

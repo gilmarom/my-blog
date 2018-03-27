@@ -1,6 +1,6 @@
  <div *ngIf="post$ | async as post">
     <h1>{{ post.title }}</h1>
     <h3>{{ post.subtitle }}</h3>
-       <div [ngStyle.lt-md]="{'font-size':'16px'}" [innerHTML]="post.content"></div>
+       <div [ngStyle.lt-md]="{'font-size':'13px'}" [innerHTML]="post.content"></div>
  </div>
 
