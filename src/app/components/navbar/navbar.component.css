@@ -1,76 +1,56 @@
 
 
- .nav
- {
-  background-color:white; 
-  
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index:1; /*so elements cant go above the navbar*/
-  height: 60px;
-  -webkit-box-shadow: 0 8px 6px -6px #999;
-  -moz-box-shadow: 0 8px 6px -6px #999;
-   box-shadow: 0 8px 6px -6px #999;
-   transition: 0.3s;
-   opacity: 0.6;
- } 
- .nav li {
-    width: 130px;
-    border-bottom: none;
-    height: 30px;
-    line-height: 20px;
-    font-size: 25px;
-    display: inline-block;
-    margin-right: -4px;
-  }
-   
-  .nav a {
-    border-bottom: none;
-    text-decoration: none;
-  }
-  
-  .nav > ul > li {
-    text-align: center;
+
+   nav{
+    background-color: white; 
+    position: fixed;
+    top:0;
+    right: 0;
+    width: 100%;
+    height: 100px; 
+    z-index:1; 
     
-  }
-
-  .nav > ul > li > a {
-    padding-left: 0;
-    color: gray;
-    opacity: 1;
-    text-decoration: none;
-    
-  }
-
-  /* Sub Menus */
-  .nav li ul {
-    position: absolute;
-    display: none;
-    width: inherit;
-    color: gray;
-    text-decoration: none;
-    background-color:white; 
- 
-  }
-
-  .nav li:hover ul {
-    display: block;
-  }
-   
-  .nav li ul li {
-    display: block;
-    color: gray;
-    margin-top: 10px;
-  }
-
-    .nav li ul li a{
-    display: block;
-    color: gray;   
-  }
-
-  .scrolled{
-  background-color: white;
-  transition: 1.5s;
-  opacity: 1;
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
 }
+.nav ul{ 
+    position: relative;
+    top:50px;
+    right: 0;
+    list-style-type: none;
+    font-size: 0;
+    letter-spacing: 0;
+    width: auto;
+    border-bottom: none;
+    padding-left: 55%;
+    
+}
+
+.nav li{
+    float: left;
+    word-spacing: .3m;
+    
+}
+.nav a{
+    
+    text-decoration: none;
+    font-size: 14px;
+    font-family:Lato;
+    color: #5D5D5D;  
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: .3em;
+    text-transform: uppercase;     
+}
+
+.logo-section{
+    float: left;
+     position: fixed;
+    top:0;
+    left: 5%;
+    height: 100px;
+    width:150px;
+    
+}
+   
