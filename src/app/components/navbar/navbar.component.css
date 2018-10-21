@@ -23,7 +23,7 @@
     letter-spacing: 0;
     width: auto;
     border-bottom: none;
-    padding-left: 55%;
+    padding-left: 40%;
     
 }
 
@@ -35,7 +35,7 @@
 .nav a{
     
     text-decoration: none;
-    font-size: 14px;
+    font-size: 13px;
     font-family:Lato;
     color: #5D5D5D;  
     font-weight: 500;
