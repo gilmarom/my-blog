@@ -56,6 +56,6 @@
 .nav ul li ul {
     display: none;
 }
-.nav ul li ul: hover{
+.nav ul: li > ul hover{
     display: block;
 } 
