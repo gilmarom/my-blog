@@ -46,11 +46,16 @@
 
 .logo-section{
     float: left;
-     position: fixed;
+    position: fixed;
     top:0;
     left: 5%;
     height: 100px;
     width:150px;
     
 }
-   
+.nav ul li ul {
+    display: none;
+}
+.nav ul li ul: hover{
+    display: block;
+} 
