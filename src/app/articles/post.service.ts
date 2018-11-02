@@ -133,8 +133,9 @@ Thank you very much Micheal, and good luck on solving the problem it was a great
  
 </p>
 </div>`
-let ruth=`<div fxLayoutAlign="center center"><p>Carlo Pecoraro, PhD. is the Founder and Directo of Physalia-courses. They conduct professional courses to promote medical research. They have a wide range of courses like 
-Data Visualization with Python, Speciation genomics, Machine Learning and much more. What I like in workshops is that there are those who ask questions in real time to move very practically in a short time and the possibility of getting to know people and hearing about new projects. Lets hear from him about his mission and how he see medical research will evolve.</p>
+let ruth=`<div fxLayoutAlign="center center"><p>PhD. Carlo Pecoraro, is the Founder and Director of Physalia-courses. They conduct professional courses to promote medical research.  you can find a wind range of courses and workshops like 
+Data Visualization with Python, Speciation genomics, Machine Learning and much more. What I love in workshops it gives you the opportunity to ask questions in real time and gain 
+useful information in a short part of time. another advantage is the possibility of getting to know new people and hearing about new projects. Lets hear from Carlos about his mission and how he sees medical research will evolve in the future.</p>
 <p>Q: Tell us a little about yourself, how did you get into the field of bio informatics?</p>
 <p>A: I got into the filed of bioinformatics during my PhD project that was in collaboration between the University of Bologna in Italy and IRD in France. I worked with RADseq data to study patterns of genetic differentiation among tuna samples at the global scale. The results of that study are now published on Scientific Reports (https://www.nature.com/articles/s41598-018-32331-3)</p>
 <p>Q: What contribution would you like to bring to the world by engaging in the field you chose? </p>
@@ -145,7 +146,7 @@ Data Visualization with Python, Speciation genomics, Machine Learning and much m
 <p>A: Yes, I think so. Of course it depends on what background people have, which will make a big difference in the speed and cost-effectiveness of the learned outcome. But I guess that interdisciplinary is key in science and we need to work in that direction to integrate data and to get a bigger picture of whatever topic we are interested in.</p>
 <p>Q: If someone wants to combine bio informatics and aging research what will you recommend to him/her? </p>
 <p>A: It is absolutely possible and high-throughput genomic and proteomic technologies have generated a wealth of publicly available data on ageing. Easy access to these data, and their computational analysis, is of great importance in order to pinpoint the causes and effects of ageing.</p>
-<p>Go read more about their courses and workshops in their websits https://www.physalia-courses.org/courses-workshops/</p>
+<p>Go read more about their courses and workshops in their websits <a> https://www.physalia-courses.org/courses-workshops/</a></p>
 </div>`;
 
 export class Posts{
@@ -154,7 +155,7 @@ export class Posts{
 const POSTS =[
   new Posts(1,'Interview with M.D. Micheal B. Fossil','cure for Alzhaimer',"../assets/images/brain.jpg",`"We intervene not only at the most fundamental level of the cascade of pathology in the CNS, but at the single most effective point of clinical (and financial) intervention".` ,micheal),
   
-  new Posts(2,  'Carlo Pecoraro, PhD.', "Physalia-courses, a place to lift your bio tech career", "../assets/images/dna.jpg",'soon interview with ruth' ,ruth)
+  new Posts(2,  'Carlo Pecoraro, PhD.', "Physalia-courses, a place to lift your bio tech career", "../assets/images/dna.jpg",`"We are trying to help people with their bioinformatic work, providing exellent Workshops with very skilled instructors in life science and medicine"` ,ruth)
 ] 
 
 import { Injectable } from '@angular/core';
