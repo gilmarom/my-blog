@@ -146,7 +146,7 @@ useful information in a short part of time. another advantage is the possibility
 <p>A: Yes, I think so. Of course it depends on what background people have, which will make a big difference in the speed and cost-effectiveness of the learned outcome. But I guess that interdisciplinary is key in science and we need to work in that direction to integrate data and to get a bigger picture of whatever topic we are interested in.</p>
 <p>Q: If someone wants to combine bio informatics and aging research what will you recommend to him/her? </p>
 <p>A: It is absolutely possible and high-throughput genomic and proteomic technologies have generated a wealth of publicly available data on ageing. Easy access to these data, and their computational analysis, is of great importance in order to pinpoint the causes and effects of ageing.</p>
-<p>Go read more about their courses and workshops in their websits <a> https://www.physalia-courses.org/courses-workshops/</a></p>
+<p>Go read more about their courses and workshops in their<a href="https://www.physalia-courses.org/courses-workshops">websits </a>before they are Sold Out!!!.</p>
 </div>`;
 
 export class Posts{
@@ -155,7 +155,7 @@ export class Posts{
 const POSTS =[
   new Posts(1,'Interview with M.D. Micheal B. Fossil','cure for Alzhaimer',"../assets/images/brain.jpg",`"We intervene not only at the most fundamental level of the cascade of pathology in the CNS, but at the single most effective point of clinical (and financial) intervention".` ,micheal),
   
-  new Posts(2,  'Carlo Pecoraro, PhD.', "Physalia-courses, a place to lift your bio tech career", "../assets/images/dna.jpg",`"We are trying to help people with their bioinformatic work, providing exellent Workshops with very skilled instructors in life science and medicine"` ,ruth)
+  new Posts(2,  'Carlo Pecoraro, PhD.', "Physalia-courses, a place to lift your bio tech career", "../assets/images/dna.jpg",`"We are trying to help people with their bioinformatic work, providing exellent Workshops with very skilled instructors in life science and medicine".` ,ruth)
 ] 
 
 import { Injectable } from '@angular/core';
