@@ -146,7 +146,7 @@ useful information in a short part of time. another advantage is the possibility
 <p>A: Yes, I think so. Of course it depends on what background people have, which will make a big difference in the speed and cost-effectiveness of the learned outcome. But I guess that interdisciplinary is key in science and we need to work in that direction to integrate data and to get a bigger picture of whatever topic we are interested in.</p>
 <p>Q: If someone wants to combine bio informatics and aging research what will you recommend to him/her?</p>
 <p>A: It is absolutely possible and high-throughput genomic and proteomic technologies have generated a wealth of publicly available data on ageing. Easy access to these data, and their computational analysis, is of great importance in order to pinpoint the causes and effects of ageing.</p>
-<p>Go read more about their courses and workshops in their<a href="https://www.physalia-courses.org/courses-workshops">websits </a>before they are Sold Out!!!.</p>
+<p>Go read more about their courses and workshops in their&nbsp;<a href="https://www.physalia-courses.org/courses-workshops">websits </a>&nbsp;before they are Sold Out!!!.</p>
 </div>`;
 
 export class Posts{
