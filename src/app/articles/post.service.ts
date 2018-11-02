@@ -133,7 +133,7 @@ Thank you very much Micheal, and good luck on solving the problem it was a great
  
 </p>
 </div>`
-let ruth=`<div fxLayoutAlign="center center"><p>PhD. Carlo Pecoraro, is the Founder and Director of Physalia-courses. They conduct professional courses to promote medical research.  you can find a wind range of courses and workshops like 
+let ruth=`<div fxLayoutAlign="center center"><p>PhD. Carlo Pecoraro, is the Founder and Director of Physalia-courses. They conduct professional courses to promote medical research.  you can find a wide range of courses and workshops like 
 Data Visualization with Python, Speciation genomics, Machine Learning and much more. What I love in workshops it gives you the opportunity to ask questions in real time and gain 
 useful information in a short part of time. another advantage is the possibility of getting to know new people and hearing about new projects. Lets hear from Carlos about his mission and how he sees medical research will evolve in the future.</p>
 <p>Q: Tell us a little about yourself, how did you get into the field of bio informatics?</p>
@@ -144,7 +144,7 @@ useful information in a short part of time. another advantage is the possibility
 <p>A: The topic of our courses reflect my research interests. I am trying to be always updated about the new technologies, methods and software. Of courses, there are other researches involved in our company and we share ideas and thoughts about topics and instructors. Our courses target mainly biologists, ecologists and in general people working with NGS data. Of course, they can not become experts in 5 days but, with our mix of lectures and practical hands-on sessions, they will get a clear idea about both the theoretical background and the practical aspects of the specific analysis.</p>
 <p>Q: This field is becoming very technological and even more statistical while data is growing, do you think people from other fields will be able to integrate into the field?</p>
 <p>A: Yes, I think so. Of course it depends on what background people have, which will make a big difference in the speed and cost-effectiveness of the learned outcome. But I guess that interdisciplinary is key in science and we need to work in that direction to integrate data and to get a bigger picture of whatever topic we are interested in.</p>
-<p>Q: If someone wants to combine bio informatics and aging research what will you recommend to him/her? </p>
+<p>Q: If someone wants to combine bio informatics and aging research what will you recommend to him/her?</p>
 <p>A: It is absolutely possible and high-throughput genomic and proteomic technologies have generated a wealth of publicly available data on ageing. Easy access to these data, and their computational analysis, is of great importance in order to pinpoint the causes and effects of ageing.</p>
 <p>Go read more about their courses and workshops in their<a href="https://www.physalia-courses.org/courses-workshops">websits </a>before they are Sold Out!!!.</p>
 </div>`;
