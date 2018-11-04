@@ -9,8 +9,9 @@
        <app-sidenav [@slideInOut]="menuState" id="sidenav">
        </app-sidenav>   
     </div> 
-    
+    <div fxHide.lt-md="true" >
     <app-navbar></app-navbar> 
+    </div>  
     <router-outlet></router-outlet>
    
     <app-footer></app-footer>
